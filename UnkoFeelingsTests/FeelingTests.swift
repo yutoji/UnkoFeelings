@@ -11,7 +11,7 @@ class FeelingTests: XCTestCase {
     override func setUp() {
         super.setUp()
         _now = Date()
-        _feeling = FeelingImpl(message: "It's Good!", condition: .normal, postedAt: _now)
+        _feeling = Feeling(message: "It's Good!", condition: .normal, postedAt: _now)
     }
     
     override func tearDown() {
