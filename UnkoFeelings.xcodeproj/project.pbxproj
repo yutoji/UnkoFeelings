@@ -19,6 +19,9 @@
 		51584549214F849000DE5D94 /* LogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51584548214F849000DE5D94 /* LogViewController.swift */; };
 		5158454B214F855A00DE5D94 /* Log.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5158454A214F855A00DE5D94 /* Log.storyboard */; };
 		5158454D214F85EB00DE5D94 /* Input.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5158454C214F85EB00DE5D94 /* Input.storyboard */; };
+		51584555214FBD1C00DE5D94 /* Feeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51584554214FBD1C00DE5D94 /* Feeling.swift */; };
+		51584557214FBDF900DE5D94 /* FeelingCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51584556214FBDF900DE5D94 /* FeelingCondition.swift */; };
+		51584559214FD48D00DE5D94 /* FeelingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51584558214FD48D00DE5D94 /* FeelingTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,9 @@
 		51584548214F849000DE5D94 /* LogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogViewController.swift; sourceTree = "<group>"; };
 		5158454A214F855A00DE5D94 /* Log.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Log.storyboard; sourceTree = "<group>"; };
 		5158454C214F85EB00DE5D94 /* Input.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Input.storyboard; sourceTree = "<group>"; };
+		51584554214FBD1C00DE5D94 /* Feeling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feeling.swift; sourceTree = "<group>"; };
+		51584556214FBDF900DE5D94 /* FeelingCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingCondition.swift; sourceTree = "<group>"; };
+		51584558214FD48D00DE5D94 /* FeelingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +113,7 @@
 		515844D4214F474100DE5D94 /* UnkoFeelings */ = {
 			isa = PBXGroup;
 			children = (
+				51584553214FBD0700DE5D94 /* domain */,
 				51584551214FB96200DE5D94 /* viewController */,
 				515844D5214F474100DE5D94 /* AppDelegate.swift */,
 				515844DF214F474300DE5D94 /* Assets.xcassets */,
@@ -122,6 +129,7 @@
 			children = (
 				515844ED214F474400DE5D94 /* UnkoFeelingsTests.swift */,
 				515844EF214F474400DE5D94 /* Info.plist */,
+				51584558214FD48D00DE5D94 /* FeelingTests.swift */,
 			);
 			path = UnkoFeelingsTests;
 			sourceTree = "<group>";
@@ -154,6 +162,15 @@
 				51584548214F849000DE5D94 /* LogViewController.swift */,
 			);
 			path = tabContent;
+			sourceTree = "<group>";
+		};
+		51584553214FBD0700DE5D94 /* domain */ = {
+			isa = PBXGroup;
+			children = (
+				51584554214FBD1C00DE5D94 /* Feeling.swift */,
+				51584556214FBDF900DE5D94 /* FeelingCondition.swift */,
+			);
+			path = domain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,11 +306,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51584555214FBD1C00DE5D94 /* Feeling.swift in Sources */,
 				515844DE214F474100DE5D94 /* UnkoFeelings.xcdatamodeld in Sources */,
 				51584549214F849000DE5D94 /* LogViewController.swift in Sources */,
 				51584547214F845700DE5D94 /* InputViewController.swift in Sources */,
 				515844D8214F474100DE5D94 /* ViewController.swift in Sources */,
 				515844D6214F474100DE5D94 /* AppDelegate.swift in Sources */,
+				51584557214FBDF900DE5D94 /* FeelingCondition.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +320,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51584559214FD48D00DE5D94 /* FeelingTests.swift in Sources */,
 				515844EE214F474400DE5D94 /* UnkoFeelingsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
