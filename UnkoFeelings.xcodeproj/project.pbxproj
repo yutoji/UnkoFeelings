@@ -22,6 +22,8 @@
 		51584555214FBD1C00DE5D94 /* Feeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51584554214FBD1C00DE5D94 /* Feeling.swift */; };
 		51584557214FBDF900DE5D94 /* FeelingCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51584556214FBDF900DE5D94 /* FeelingCondition.swift */; };
 		51584559214FD48D00DE5D94 /* FeelingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51584558214FD48D00DE5D94 /* FeelingTests.swift */; };
+		5158455D214FE29800DE5D94 /* FeelingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5158455C214FE29800DE5D94 /* FeelingRepository.swift */; };
+		5158455F214FE49000DE5D94 /* MemoryFeelingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5158455E214FE49000DE5D94 /* MemoryFeelingRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		51584554214FBD1C00DE5D94 /* Feeling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feeling.swift; sourceTree = "<group>"; };
 		51584556214FBDF900DE5D94 /* FeelingCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingCondition.swift; sourceTree = "<group>"; };
 		51584558214FD48D00DE5D94 /* FeelingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingTests.swift; sourceTree = "<group>"; };
+		5158455C214FE29800DE5D94 /* FeelingRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingRepository.swift; sourceTree = "<group>"; };
+		5158455E214FE49000DE5D94 /* MemoryFeelingRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryFeelingRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				51584553214FBD0700DE5D94 /* domain */,
+				5158455B214FE24A00DE5D94 /* repository */,
 				51584551214FB96200DE5D94 /* viewController */,
 				515844D5214F474100DE5D94 /* AppDelegate.swift */,
 				515844DF214F474300DE5D94 /* Assets.xcassets */,
@@ -169,8 +174,17 @@
 			children = (
 				51584554214FBD1C00DE5D94 /* Feeling.swift */,
 				51584556214FBDF900DE5D94 /* FeelingCondition.swift */,
+				5158455C214FE29800DE5D94 /* FeelingRepository.swift */,
 			);
 			path = domain;
+			sourceTree = "<group>";
+		};
+		5158455B214FE24A00DE5D94 /* repository */ = {
+			isa = PBXGroup;
+			children = (
+				5158455E214FE49000DE5D94 /* MemoryFeelingRepository.swift */,
+			);
+			path = repository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,10 +320,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5158455F214FE49000DE5D94 /* MemoryFeelingRepository.swift in Sources */,
 				51584555214FBD1C00DE5D94 /* Feeling.swift in Sources */,
 				515844DE214F474100DE5D94 /* UnkoFeelings.xcdatamodeld in Sources */,
 				51584549214F849000DE5D94 /* LogViewController.swift in Sources */,
 				51584547214F845700DE5D94 /* InputViewController.swift in Sources */,
+				5158455D214FE29800DE5D94 /* FeelingRepository.swift in Sources */,
 				515844D8214F474100DE5D94 /* ViewController.swift in Sources */,
 				515844D6214F474100DE5D94 /* AppDelegate.swift in Sources */,
 				51584557214FBDF900DE5D94 /* FeelingCondition.swift in Sources */,
