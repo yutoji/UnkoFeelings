@@ -1,0 +1,600 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		515844D6214F474100DE5D94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515844D5214F474100DE5D94 /* AppDelegate.swift */; };
+		515844D8214F474100DE5D94 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515844D7214F474100DE5D94 /* ViewController.swift */; };
+		515844DB214F474100DE5D94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 515844D9214F474100DE5D94 /* Main.storyboard */; };
+		515844DE214F474100DE5D94 /* UnkoFeelings.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 515844DC214F474100DE5D94 /* UnkoFeelings.xcdatamodeld */; };
+		515844E0214F474300DE5D94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 515844DF214F474300DE5D94 /* Assets.xcassets */; };
+		515844E3214F474300DE5D94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 515844E1214F474300DE5D94 /* LaunchScreen.storyboard */; };
+		515844EE214F474400DE5D94 /* UnkoFeelingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515844ED214F474400DE5D94 /* UnkoFeelingsTests.swift */; };
+		515844F9214F474400DE5D94 /* UnkoFeelingsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515844F8214F474400DE5D94 /* UnkoFeelingsUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		515844EA214F474400DE5D94 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 515844CA214F474100DE5D94 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 515844D1214F474100DE5D94;
+			remoteInfo = UnkoFeelings;
+		};
+		515844F5214F474400DE5D94 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 515844CA214F474100DE5D94 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 515844D1214F474100DE5D94;
+			remoteInfo = UnkoFeelings;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		515844D2214F474100DE5D94 /* UnkoFeelings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnkoFeelings.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		515844D5214F474100DE5D94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		515844D7214F474100DE5D94 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		515844DA214F474100DE5D94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		515844DD214F474100DE5D94 /* UnkoFeelings.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UnkoFeelings.xcdatamodel; sourceTree = "<group>"; };
+		515844DF214F474300DE5D94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		515844E2214F474300DE5D94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		515844E4214F474300DE5D94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		515844E9214F474400DE5D94 /* UnkoFeelingsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnkoFeelingsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		515844ED214F474400DE5D94 /* UnkoFeelingsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnkoFeelingsTests.swift; sourceTree = "<group>"; };
+		515844EF214F474400DE5D94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		515844F4214F474400DE5D94 /* UnkoFeelingsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnkoFeelingsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		515844F8214F474400DE5D94 /* UnkoFeelingsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnkoFeelingsUITests.swift; sourceTree = "<group>"; };
+		515844FA214F474400DE5D94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		515844CF214F474100DE5D94 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		515844E6214F474400DE5D94 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		515844F1214F474400DE5D94 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		515844C9214F474100DE5D94 = {
+			isa = PBXGroup;
+			children = (
+				515844D4214F474100DE5D94 /* UnkoFeelings */,
+				515844EC214F474400DE5D94 /* UnkoFeelingsTests */,
+				515844F7214F474400DE5D94 /* UnkoFeelingsUITests */,
+				515844D3214F474100DE5D94 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		515844D3214F474100DE5D94 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				515844D2214F474100DE5D94 /* UnkoFeelings.app */,
+				515844E9214F474400DE5D94 /* UnkoFeelingsTests.xctest */,
+				515844F4214F474400DE5D94 /* UnkoFeelingsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		515844D4214F474100DE5D94 /* UnkoFeelings */ = {
+			isa = PBXGroup;
+			children = (
+				515844D5214F474100DE5D94 /* AppDelegate.swift */,
+				515844D7214F474100DE5D94 /* ViewController.swift */,
+				515844D9214F474100DE5D94 /* Main.storyboard */,
+				515844DF214F474300DE5D94 /* Assets.xcassets */,
+				515844E1214F474300DE5D94 /* LaunchScreen.storyboard */,
+				515844E4214F474300DE5D94 /* Info.plist */,
+				515844DC214F474100DE5D94 /* UnkoFeelings.xcdatamodeld */,
+			);
+			path = UnkoFeelings;
+			sourceTree = "<group>";
+		};
+		515844EC214F474400DE5D94 /* UnkoFeelingsTests */ = {
+			isa = PBXGroup;
+			children = (
+				515844ED214F474400DE5D94 /* UnkoFeelingsTests.swift */,
+				515844EF214F474400DE5D94 /* Info.plist */,
+			);
+			path = UnkoFeelingsTests;
+			sourceTree = "<group>";
+		};
+		515844F7214F474400DE5D94 /* UnkoFeelingsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				515844F8214F474400DE5D94 /* UnkoFeelingsUITests.swift */,
+				515844FA214F474400DE5D94 /* Info.plist */,
+			);
+			path = UnkoFeelingsUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		515844D1214F474100DE5D94 /* UnkoFeelings */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 515844FD214F474400DE5D94 /* Build configuration list for PBXNativeTarget "UnkoFeelings" */;
+			buildPhases = (
+				515844CE214F474100DE5D94 /* Sources */,
+				515844CF214F474100DE5D94 /* Frameworks */,
+				515844D0214F474100DE5D94 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UnkoFeelings;
+			productName = UnkoFeelings;
+			productReference = 515844D2214F474100DE5D94 /* UnkoFeelings.app */;
+			productType = "com.apple.product-type.application";
+		};
+		515844E8214F474400DE5D94 /* UnkoFeelingsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 51584500214F474400DE5D94 /* Build configuration list for PBXNativeTarget "UnkoFeelingsTests" */;
+			buildPhases = (
+				515844E5214F474400DE5D94 /* Sources */,
+				515844E6214F474400DE5D94 /* Frameworks */,
+				515844E7214F474400DE5D94 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				515844EB214F474400DE5D94 /* PBXTargetDependency */,
+			);
+			name = UnkoFeelingsTests;
+			productName = UnkoFeelingsTests;
+			productReference = 515844E9214F474400DE5D94 /* UnkoFeelingsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		515844F3214F474400DE5D94 /* UnkoFeelingsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 51584503214F474400DE5D94 /* Build configuration list for PBXNativeTarget "UnkoFeelingsUITests" */;
+			buildPhases = (
+				515844F0214F474400DE5D94 /* Sources */,
+				515844F1214F474400DE5D94 /* Frameworks */,
+				515844F2214F474400DE5D94 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				515844F6214F474400DE5D94 /* PBXTargetDependency */,
+			);
+			name = UnkoFeelingsUITests;
+			productName = UnkoFeelingsUITests;
+			productReference = 515844F4214F474400DE5D94 /* UnkoFeelingsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		515844CA214F474100DE5D94 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = yutoji;
+				TargetAttributes = {
+					515844D1214F474100DE5D94 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					515844E8214F474400DE5D94 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 515844D1214F474100DE5D94;
+					};
+					515844F3214F474400DE5D94 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 515844D1214F474100DE5D94;
+					};
+				};
+			};
+			buildConfigurationList = 515844CD214F474100DE5D94 /* Build configuration list for PBXProject "UnkoFeelings" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 515844C9214F474100DE5D94;
+			productRefGroup = 515844D3214F474100DE5D94 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				515844D1214F474100DE5D94 /* UnkoFeelings */,
+				515844E8214F474400DE5D94 /* UnkoFeelingsTests */,
+				515844F3214F474400DE5D94 /* UnkoFeelingsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		515844D0214F474100DE5D94 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				515844E3214F474300DE5D94 /* LaunchScreen.storyboard in Resources */,
+				515844E0214F474300DE5D94 /* Assets.xcassets in Resources */,
+				515844DB214F474100DE5D94 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		515844E7214F474400DE5D94 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		515844F2214F474400DE5D94 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		515844CE214F474100DE5D94 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				515844DE214F474100DE5D94 /* UnkoFeelings.xcdatamodeld in Sources */,
+				515844D8214F474100DE5D94 /* ViewController.swift in Sources */,
+				515844D6214F474100DE5D94 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		515844E5214F474400DE5D94 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				515844EE214F474400DE5D94 /* UnkoFeelingsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		515844F0214F474400DE5D94 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				515844F9214F474400DE5D94 /* UnkoFeelingsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		515844EB214F474400DE5D94 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 515844D1214F474100DE5D94 /* UnkoFeelings */;
+			targetProxy = 515844EA214F474400DE5D94 /* PBXContainerItemProxy */;
+		};
+		515844F6214F474400DE5D94 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 515844D1214F474100DE5D94 /* UnkoFeelings */;
+			targetProxy = 515844F5214F474400DE5D94 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		515844D9214F474100DE5D94 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				515844DA214F474100DE5D94 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		515844E1214F474300DE5D94 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				515844E2214F474300DE5D94 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		515844FB214F474400DE5D94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		515844FC214F474400DE5D94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		515844FE214F474400DE5D94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = UnkoFeelings/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jp.hateblo.yutoji.UnkoFeelings;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		515844FF214F474400DE5D94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = UnkoFeelings/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jp.hateblo.yutoji.UnkoFeelings;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		51584501214F474400DE5D94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = UnkoFeelingsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jp.hateblo.yutoji.UnkoFeelingsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UnkoFeelings.app/UnkoFeelings";
+			};
+			name = Debug;
+		};
+		51584502214F474400DE5D94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = UnkoFeelingsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jp.hateblo.yutoji.UnkoFeelingsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UnkoFeelings.app/UnkoFeelings";
+			};
+			name = Release;
+		};
+		51584504214F474400DE5D94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = UnkoFeelingsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jp.hateblo.yutoji.UnkoFeelingsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = UnkoFeelings;
+			};
+			name = Debug;
+		};
+		51584505214F474400DE5D94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = UnkoFeelingsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jp.hateblo.yutoji.UnkoFeelingsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = UnkoFeelings;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		515844CD214F474100DE5D94 /* Build configuration list for PBXProject "UnkoFeelings" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				515844FB214F474400DE5D94 /* Debug */,
+				515844FC214F474400DE5D94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		515844FD214F474400DE5D94 /* Build configuration list for PBXNativeTarget "UnkoFeelings" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				515844FE214F474400DE5D94 /* Debug */,
+				515844FF214F474400DE5D94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		51584500214F474400DE5D94 /* Build configuration list for PBXNativeTarget "UnkoFeelingsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51584501214F474400DE5D94 /* Debug */,
+				51584502214F474400DE5D94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		51584503214F474400DE5D94 /* Build configuration list for PBXNativeTarget "UnkoFeelingsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51584504214F474400DE5D94 /* Debug */,
+				51584505214F474400DE5D94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		515844DC214F474100DE5D94 /* UnkoFeelings.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				515844DD214F474100DE5D94 /* UnkoFeelings.xcdatamodel */,
+			);
+			currentVersion = 515844DD214F474100DE5D94 /* UnkoFeelings.xcdatamodel */;
+			path = UnkoFeelings.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 515844CA214F474100DE5D94 /* Project object */;
+}
