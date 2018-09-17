@@ -15,6 +15,10 @@
 		515844E3214F474300DE5D94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 515844E1214F474300DE5D94 /* LaunchScreen.storyboard */; };
 		515844EE214F474400DE5D94 /* UnkoFeelingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515844ED214F474400DE5D94 /* UnkoFeelingsTests.swift */; };
 		515844F9214F474400DE5D94 /* UnkoFeelingsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515844F8214F474400DE5D94 /* UnkoFeelingsUITests.swift */; };
+		51584547214F845700DE5D94 /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51584546214F845700DE5D94 /* InputViewController.swift */; };
+		51584549214F849000DE5D94 /* LogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51584548214F849000DE5D94 /* LogViewController.swift */; };
+		5158454B214F855A00DE5D94 /* Log.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5158454A214F855A00DE5D94 /* Log.storyboard */; };
+		5158454D214F85EB00DE5D94 /* Input.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5158454C214F85EB00DE5D94 /* Input.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		515844F4214F474400DE5D94 /* UnkoFeelingsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnkoFeelingsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		515844F8214F474400DE5D94 /* UnkoFeelingsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnkoFeelingsUITests.swift; sourceTree = "<group>"; };
 		515844FA214F474400DE5D94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		51584546214F845700DE5D94 /* InputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
+		51584548214F849000DE5D94 /* LogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogViewController.swift; sourceTree = "<group>"; };
+		5158454A214F855A00DE5D94 /* Log.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Log.storyboard; sourceTree = "<group>"; };
+		5158454C214F85EB00DE5D94 /* Input.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Input.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +107,13 @@
 		515844D4214F474100DE5D94 /* UnkoFeelings */ = {
 			isa = PBXGroup;
 			children = (
+				51584546214F845700DE5D94 /* InputViewController.swift */,
+				51584548214F849000DE5D94 /* LogViewController.swift */,
 				515844D5214F474100DE5D94 /* AppDelegate.swift */,
 				515844D7214F474100DE5D94 /* ViewController.swift */,
 				515844D9214F474100DE5D94 /* Main.storyboard */,
+				5158454C214F85EB00DE5D94 /* Input.storyboard */,
+				5158454A214F855A00DE5D94 /* Log.storyboard */,
 				515844DF214F474300DE5D94 /* Assets.xcassets */,
 				515844E1214F474300DE5D94 /* LaunchScreen.storyboard */,
 				515844E4214F474300DE5D94 /* Info.plist */,
@@ -235,6 +247,8 @@
 				515844E3214F474300DE5D94 /* LaunchScreen.storyboard in Resources */,
 				515844E0214F474300DE5D94 /* Assets.xcassets in Resources */,
 				515844DB214F474100DE5D94 /* Main.storyboard in Resources */,
+				5158454B214F855A00DE5D94 /* Log.storyboard in Resources */,
+				5158454D214F85EB00DE5D94 /* Input.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +274,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				515844DE214F474100DE5D94 /* UnkoFeelings.xcdatamodeld in Sources */,
+				51584549214F849000DE5D94 /* LogViewController.swift in Sources */,
+				51584547214F845700DE5D94 /* InputViewController.swift in Sources */,
 				515844D8214F474100DE5D94 /* ViewController.swift in Sources */,
 				515844D6214F474100DE5D94 /* AppDelegate.swift in Sources */,
 			);

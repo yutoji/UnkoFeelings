@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="20F-Ij-csh">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Input-->
+        <scene sceneID="cVg-vT-2nK">
+            <objects>
+                <viewController title="Input" id="20F-Ij-csh" customClass="RecordViewController" customModule="UnkoFeelings" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pXQ-l7-vE1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="うんこの気持ち" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jvj-dh-ged">
+                                <rect key="frame" x="84" y="40" width="206" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lSr-Sk-jaf">
+                                <rect key="frame" x="328" y="392" width="31" height="30"/>
+                                <state key="normal" title="記録"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="250" image="unchi_character_yawarakai" translatesAutoresizingMaskIntoConstraints="NO" id="sKi-1D-Xa5">
+                                <rect key="frame" x="67" y="83" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" priority="750" constant="128" id="dX6-oG-fwo"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="今日のうんこの気持ちを教えてください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uKd-rt-I7k" userLabel="aa">
+                                <rect key="frame" x="31" y="219" width="312" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" keyboardDismissMode="interactive" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WBu-IA-JeZ">
+                                <rect key="frame" x="16" y="256" width="343" height="128"/>
+                                <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="04m-qZ-8Es"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sKi-1D-Xa5" firstAttribute="top" secondItem="Jvj-dh-ged" secondAttribute="bottom" constant="8" symbolic="YES" id="34l-WA-P6J"/>
+                            <constraint firstItem="uKd-rt-I7k" firstAttribute="centerX" secondItem="WBu-IA-JeZ" secondAttribute="centerX" id="47N-Nt-noy"/>
+                            <constraint firstItem="sKi-1D-Xa5" firstAttribute="leading" secondItem="X8F-Cx-472" secondAttribute="leading" constant="67" id="8VZ-pn-5iQ"/>
+                            <constraint firstItem="lSr-Sk-jaf" firstAttribute="trailing" secondItem="WBu-IA-JeZ" secondAttribute="trailing" id="8bX-0H-XsL"/>
+                            <constraint firstItem="WBu-IA-JeZ" firstAttribute="trailing" secondItem="pXQ-l7-vE1" secondAttribute="trailingMargin" id="8vv-Eu-gfA"/>
+                            <constraint firstItem="uKd-rt-I7k" firstAttribute="top" secondItem="sKi-1D-Xa5" secondAttribute="bottom" constant="8" symbolic="YES" id="DAR-5q-qhJ"/>
+                            <constraint firstItem="WBu-IA-JeZ" firstAttribute="top" secondItem="uKd-rt-I7k" secondAttribute="bottom" constant="16" id="M9e-BS-lN9"/>
+                            <constraint firstItem="WBu-IA-JeZ" firstAttribute="leading" secondItem="pXQ-l7-vE1" secondAttribute="leadingMargin" id="WPr-ef-EUl"/>
+                            <constraint firstItem="sKi-1D-Xa5" firstAttribute="centerX" secondItem="uKd-rt-I7k" secondAttribute="centerX" id="Zai-NU-cYM"/>
+                            <constraint firstItem="Jvj-dh-ged" firstAttribute="top" secondItem="X8F-Cx-472" secondAttribute="top" constant="20" id="c0Y-Vv-o3n"/>
+                            <constraint firstItem="lSr-Sk-jaf" firstAttribute="top" secondItem="WBu-IA-JeZ" secondAttribute="bottom" constant="8" symbolic="YES" id="dVo-ZI-CTe"/>
+                            <constraint firstItem="Jvj-dh-ged" firstAttribute="centerX" secondItem="sKi-1D-Xa5" secondAttribute="centerX" id="fFl-LW-YjL"/>
+                            <constraint firstItem="X8F-Cx-472" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="lSr-Sk-jaf" secondAttribute="bottom" constant="20" id="o1M-Tn-a5b"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="X8F-Cx-472"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="記録する" id="Jv6-jC-IeV"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GGO-v6-vse" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="157.59999999999999" y="164.16791604197903"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="unchi_character_yawarakai" width="400" height="279"/>
+    </resources>
+</document>
