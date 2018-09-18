@@ -127,7 +127,7 @@
 			children = (
 				51584553214FBD0700DE5D94 /* domain */,
 				5158455B214FE24A00DE5D94 /* repository */,
-				51584551214FB96200DE5D94 /* viewController */,
+				51584551214FB96200DE5D94 /* views */,
 				515844D5214F474100DE5D94 /* AppDelegate.swift */,
 				515844DF214F474300DE5D94 /* Assets.xcassets */,
 				515844E1214F474300DE5D94 /* LaunchScreen.storyboard */,
@@ -158,26 +158,25 @@
 			path = UnkoFeelingsUITests;
 			sourceTree = "<group>";
 		};
-		51584551214FB96200DE5D94 /* viewController */ = {
+		51584551214FB96200DE5D94 /* views */ = {
 			isa = PBXGroup;
 			children = (
 				515844D9214F474100DE5D94 /* Main.storyboard */,
 				515844D7214F474100DE5D94 /* ViewController.swift */,
-				51584552214FB99700DE5D94 /* tabContent */,
+				51584552214FB99700DE5D94 /* input */,
+				5158456D215118AA00DE5D94 /* log */,
 			);
-			path = viewController;
+			path = views;
 			sourceTree = "<group>";
 		};
-		51584552214FB99700DE5D94 /* tabContent */ = {
+		51584552214FB99700DE5D94 /* input */ = {
 			isa = PBXGroup;
 			children = (
 				5158454C214F85EB00DE5D94 /* Input.storyboard */,
 				51584546214F845700DE5D94 /* InputViewController.swift */,
 				515845662150EC6B00DE5D94 /* InputViewModel.swift */,
-				5158454A214F855A00DE5D94 /* Log.storyboard */,
-				51584548214F849000DE5D94 /* LogViewController.swift */,
 			);
-			path = tabContent;
+			path = input;
 			sourceTree = "<group>";
 		};
 		51584553214FBD0700DE5D94 /* domain */ = {
@@ -197,6 +196,15 @@
 				5158455E214FE49000DE5D94 /* MemoryFeelingRepository.swift */,
 			);
 			path = repository;
+			sourceTree = "<group>";
+		};
+		5158456D215118AA00DE5D94 /* log */ = {
+			isa = PBXGroup;
+			children = (
+				5158454A214F855A00DE5D94 /* Log.storyboard */,
+				51584548214F849000DE5D94 /* LogViewController.swift */,
+			);
+			path = log;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
