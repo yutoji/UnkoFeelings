@@ -20,6 +20,7 @@ class InputViewModel {
     }
 
     func submit() {
+        assert(isSubmittable, "Unable to submit due to blank text.")
         let condition = FeelingCondition.normal
         _timeline.addFeeling(feeling:
             Feeling(message: text, condition: condition, postedAt: Date())

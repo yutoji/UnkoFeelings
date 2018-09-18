@@ -27,6 +27,7 @@
 		51584561214FE8BA00DE5D94 /* FeelingTimeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51584560214FE8BA00DE5D94 /* FeelingTimeline.swift */; };
 		51584565214FF19B00DE5D94 /* FeelingTimelineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51584564214FF19B00DE5D94 /* FeelingTimelineTests.swift */; };
 		515845672150EC6B00DE5D94 /* InputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515845662150EC6B00DE5D94 /* InputViewModel.swift */; };
+		5158456B2151096D00DE5D94 /* InputViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5158456A2151096D00DE5D94 /* InputViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		51584560214FE8BA00DE5D94 /* FeelingTimeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingTimeline.swift; sourceTree = "<group>"; };
 		51584564214FF19B00DE5D94 /* FeelingTimelineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingTimelineTests.swift; sourceTree = "<group>"; };
 		515845662150EC6B00DE5D94 /* InputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewModel.swift; sourceTree = "<group>"; };
+		5158456A2151096D00DE5D94 /* InputViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 				515844EF214F474400DE5D94 /* Info.plist */,
 				51584558214FD48D00DE5D94 /* FeelingTests.swift */,
 				51584564214FF19B00DE5D94 /* FeelingTimelineTests.swift */,
+				5158456A2151096D00DE5D94 /* InputViewModelTests.swift */,
 			);
 			path = UnkoFeelingsTests;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 				51584559214FD48D00DE5D94 /* FeelingTests.swift in Sources */,
 				51584565214FF19B00DE5D94 /* FeelingTimelineTests.swift in Sources */,
 				515844EE214F474400DE5D94 /* UnkoFeelingsTests.swift in Sources */,
+				5158456B2151096D00DE5D94 /* InputViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
