@@ -26,6 +26,7 @@
 		5158455F214FE49000DE5D94 /* MemoryFeelingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5158455E214FE49000DE5D94 /* MemoryFeelingRepository.swift */; };
 		51584561214FE8BA00DE5D94 /* FeelingTimeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51584560214FE8BA00DE5D94 /* FeelingTimeline.swift */; };
 		51584565214FF19B00DE5D94 /* FeelingTimelineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51584564214FF19B00DE5D94 /* FeelingTimelineTests.swift */; };
+		515845672150EC6B00DE5D94 /* InputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515845662150EC6B00DE5D94 /* InputViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		5158455E214FE49000DE5D94 /* MemoryFeelingRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryFeelingRepository.swift; sourceTree = "<group>"; };
 		51584560214FE8BA00DE5D94 /* FeelingTimeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingTimeline.swift; sourceTree = "<group>"; };
 		51584564214FF19B00DE5D94 /* FeelingTimelineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingTimelineTests.swift; sourceTree = "<group>"; };
+		515845662150EC6B00DE5D94 /* InputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 			children = (
 				5158454C214F85EB00DE5D94 /* Input.storyboard */,
 				51584546214F845700DE5D94 /* InputViewController.swift */,
+				515845662150EC6B00DE5D94 /* InputViewModel.swift */,
 				5158454A214F855A00DE5D94 /* Log.storyboard */,
 				51584548214F849000DE5D94 /* LogViewController.swift */,
 			);
@@ -336,6 +339,7 @@
 				51584561214FE8BA00DE5D94 /* FeelingTimeline.swift in Sources */,
 				515844D6214F474100DE5D94 /* AppDelegate.swift in Sources */,
 				51584557214FBDF900DE5D94 /* FeelingCondition.swift in Sources */,
+				515845672150EC6B00DE5D94 /* InputViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

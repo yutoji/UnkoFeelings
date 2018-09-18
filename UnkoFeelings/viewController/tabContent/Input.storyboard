@@ -14,7 +14,7 @@
         <!--Input-->
         <scene sceneID="cVg-vT-2nK">
             <objects>
-                <viewController title="Input" id="20F-Ij-csh" customClass="RecordViewController" customModule="UnkoFeelings" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Input" id="20F-Ij-csh" customClass="InputViewController" customModule="UnkoFeelings" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pXQ-l7-vE1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,6 +28,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lSr-Sk-jaf">
                                 <rect key="frame" x="328" y="392" width="31" height="30"/>
                                 <state key="normal" title="記録"/>
+                                <connections>
+                                    <action selector="_onSubmit:" destination="20F-Ij-csh" eventType="touchUpInside" id="ebN-CB-Rfh"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="250" image="unchi_character_yawarakai" translatesAutoresizingMaskIntoConstraints="NO" id="sKi-1D-Xa5">
                                 <rect key="frame" x="67" y="83" width="240" height="128"/>
@@ -47,7 +50,6 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="04m-qZ-8Es"/>
                                 </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -72,6 +74,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="記録する" id="Jv6-jC-IeV"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="_inputTextView" destination="WBu-IA-JeZ" id="r8O-wJ-Jkf"/>
+                        <outlet property="_submitButton" destination="lSr-Sk-jaf" id="gH1-eB-i8i"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GGO-v6-vse" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

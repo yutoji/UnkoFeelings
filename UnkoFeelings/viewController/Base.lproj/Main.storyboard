@@ -29,10 +29,10 @@
             </objects>
             <point key="canvasLocation" x="1742" y="307"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--View Controller-->
         <scene sceneID="ssh-mY-Xb5">
             <objects>
-                <tabBarController id="Tcy-at-7zN" sceneMemberID="viewController">
+                <tabBarController id="Tcy-at-7zN" customClass="ViewController" customModule="UnkoFeelings" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KVI-35-4o6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
