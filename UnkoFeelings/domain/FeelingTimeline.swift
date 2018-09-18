@@ -3,7 +3,7 @@ protocol FeelingTimeline {
     var feelings: [Feeling] { get }
 }
 
-protocol FeelingTimelineDelegate {
+protocol FeelingTimelineDelegate : class {
     func onFeelingTimelineUpdated()
 }
 
@@ -13,7 +13,7 @@ protocol FeelingTimelineUpdatable {
 }
 
 class FeelingTimelineImpl: FeelingTimeline, FeelingTimelineUpdatable {
-    var delegate: FeelingTimelineDelegate?
+    weak var delegate: FeelingTimelineDelegate?
     private var _repository: FeelingRepository
     private var _feelings: [Feeling]
 
