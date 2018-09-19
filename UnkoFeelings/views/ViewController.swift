@@ -26,7 +26,7 @@ class ViewController: UITabBarController, FeelingTimelineDelegate {
     }
 
     private func _setupFeelingTimeline() {
-        _repository = MemoryFeelingRepository()
+        _repository = MemoryFeelingRepository().insertMockData() // TODO: replace to actual repository object
         _feelingTimeline = FeelingTimelineImpl(repository: _repository)
     }
 

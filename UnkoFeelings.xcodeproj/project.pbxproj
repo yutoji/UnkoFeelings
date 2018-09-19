@@ -28,6 +28,11 @@
 		51584565214FF19B00DE5D94 /* FeelingTimelineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51584564214FF19B00DE5D94 /* FeelingTimelineTests.swift */; };
 		515845672150EC6B00DE5D94 /* InputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515845662150EC6B00DE5D94 /* InputViewModel.swift */; };
 		5158456B2151096D00DE5D94 /* InputViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5158456A2151096D00DE5D94 /* InputViewModelTests.swift */; };
+		5158457321511AD400DE5D94 /* LogCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5158457121511AD400DE5D94 /* LogCell.xib */; };
+		515845752151200500DE5D94 /* LogCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515845742151200500DE5D94 /* LogCellModel.swift */; };
+		515845782151207B00DE5D94 /* ViewUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515845772151207B00DE5D94 /* ViewUtil.swift */; };
+		5174F71B215127AD00BDB119 /* LogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5174F71A215127AD00BDB119 /* LogCell.swift */; };
+		5174F71D2152494400BDB119 /* DeviceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5174F71C2152494400BDB119 /* DeviceService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +80,11 @@
 		51584564214FF19B00DE5D94 /* FeelingTimelineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingTimelineTests.swift; sourceTree = "<group>"; };
 		515845662150EC6B00DE5D94 /* InputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewModel.swift; sourceTree = "<group>"; };
 		5158456A2151096D00DE5D94 /* InputViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewModelTests.swift; sourceTree = "<group>"; };
+		5158457121511AD400DE5D94 /* LogCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogCell.xib; sourceTree = "<group>"; };
+		515845742151200500DE5D94 /* LogCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogCellModel.swift; sourceTree = "<group>"; };
+		515845772151207B00DE5D94 /* ViewUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewUtil.swift; sourceTree = "<group>"; };
+		5174F71A215127AD00BDB119 /* LogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogCell.swift; sourceTree = "<group>"; };
+		5174F71C2152494400BDB119 /* DeviceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +135,7 @@
 		515844D4214F474100DE5D94 /* UnkoFeelings */ = {
 			isa = PBXGroup;
 			children = (
+				515845762151206E00DE5D94 /* util */,
 				51584553214FBD0700DE5D94 /* domain */,
 				5158455B214FE24A00DE5D94 /* repository */,
 				51584551214FB96200DE5D94 /* views */,
@@ -203,8 +214,20 @@
 			children = (
 				5158454A214F855A00DE5D94 /* Log.storyboard */,
 				51584548214F849000DE5D94 /* LogViewController.swift */,
+				5158457121511AD400DE5D94 /* LogCell.xib */,
+				5174F71A215127AD00BDB119 /* LogCell.swift */,
+				515845742151200500DE5D94 /* LogCellModel.swift */,
 			);
 			path = log;
+			sourceTree = "<group>";
+		};
+		515845762151206E00DE5D94 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				515845772151207B00DE5D94 /* ViewUtil.swift */,
+				5174F71C2152494400BDB119 /* DeviceService.swift */,
+			);
+			path = util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,6 +336,7 @@
 			files = (
 				515844E3214F474300DE5D94 /* LaunchScreen.storyboard in Resources */,
 				515844E0214F474300DE5D94 /* Assets.xcassets in Resources */,
+				5158457321511AD400DE5D94 /* LogCell.xib in Resources */,
 				515844DB214F474100DE5D94 /* Main.storyboard in Resources */,
 				5158454B214F855A00DE5D94 /* Log.storyboard in Resources */,
 				5158454D214F85EB00DE5D94 /* Input.storyboard in Resources */,
@@ -342,15 +366,19 @@
 			files = (
 				5158455F214FE49000DE5D94 /* MemoryFeelingRepository.swift in Sources */,
 				51584555214FBD1C00DE5D94 /* Feeling.swift in Sources */,
+				515845752151200500DE5D94 /* LogCellModel.swift in Sources */,
 				515844DE214F474100DE5D94 /* UnkoFeelings.xcdatamodeld in Sources */,
+				5174F71B215127AD00BDB119 /* LogCell.swift in Sources */,
 				51584549214F849000DE5D94 /* LogViewController.swift in Sources */,
 				51584547214F845700DE5D94 /* InputViewController.swift in Sources */,
 				5158455D214FE29800DE5D94 /* FeelingRepository.swift in Sources */,
+				515845782151207B00DE5D94 /* ViewUtil.swift in Sources */,
 				515844D8214F474100DE5D94 /* ViewController.swift in Sources */,
 				51584561214FE8BA00DE5D94 /* FeelingTimeline.swift in Sources */,
 				515844D6214F474100DE5D94 /* AppDelegate.swift in Sources */,
 				51584557214FBDF900DE5D94 /* FeelingCondition.swift in Sources */,
 				515845672150EC6B00DE5D94 /* InputViewModel.swift in Sources */,
+				5174F71D2152494400BDB119 /* DeviceService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

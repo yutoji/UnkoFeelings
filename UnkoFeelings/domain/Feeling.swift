@@ -1,5 +1,9 @@
 import Foundation
 
+// This is 'value-object' to get view-layer enable to communicate with domain.
+// For 'entity' purpose, use FeelingEntity instead.
+//TODO: Implement FeelingEntity class as an entity.
+
 struct Feeling {
     var message: String
     var condition: FeelingCondition
