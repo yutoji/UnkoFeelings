@@ -38,6 +38,8 @@
 		5174F7212152742B00BDB119 /* FeelingEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5174F7202152742B00BDB119 /* FeelingEntity.swift */; };
 		51E2614F21537E4B004F4995 /* UniqueIDGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E2614E21537E4B004F4995 /* UniqueIDGenerator.swift */; };
 		51E261512153822D004F4995 /* FeelingEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E261502153822D004F4995 /* FeelingEntityTests.swift */; };
+		51E2615321538E51004F4995 /* DocumentsFeelingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E2615221538E51004F4995 /* DocumentsFeelingRepository.swift */; };
+		51E2615521538EFA004F4995 /* DocumentsFeelingRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E2615421538EFA004F4995 /* DocumentsFeelingRepositoryTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +97,8 @@
 		5174F7202152742B00BDB119 /* FeelingEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeelingEntity.swift; sourceTree = "<group>"; };
 		51E2614E21537E4B004F4995 /* UniqueIDGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniqueIDGenerator.swift; sourceTree = "<group>"; };
 		51E261502153822D004F4995 /* FeelingEntityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingEntityTests.swift; sourceTree = "<group>"; };
+		51E2615221538E51004F4995 /* DocumentsFeelingRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsFeelingRepository.swift; sourceTree = "<group>"; };
+		51E2615421538EFA004F4995 /* DocumentsFeelingRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsFeelingRepositoryTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +172,7 @@
 				5158456A2151096D00DE5D94 /* InputViewModelTests.swift */,
 				51039FCC21533BB800FBF04E /* LogCellModelFactoryTests.swift */,
 				51E261502153822D004F4995 /* FeelingEntityTests.swift */,
+				51E2615421538EFA004F4995 /* DocumentsFeelingRepositoryTests.swift */,
 			);
 			path = UnkoFeelingsTests;
 			sourceTree = "<group>";
@@ -218,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				5158455E214FE49000DE5D94 /* MemoryFeelingRepository.swift */,
+				51E2615221538E51004F4995 /* DocumentsFeelingRepository.swift */,
 			);
 			path = repository;
 			sourceTree = "<group>";
@@ -392,6 +398,7 @@
 				515845782151207B00DE5D94 /* ViewUtil.swift in Sources */,
 				51E2614F21537E4B004F4995 /* UniqueIDGenerator.swift in Sources */,
 				515844D8214F474100DE5D94 /* ViewController.swift in Sources */,
+				51E2615321538E51004F4995 /* DocumentsFeelingRepository.swift in Sources */,
 				51584561214FE8BA00DE5D94 /* FeelingTimeline.swift in Sources */,
 				515844D6214F474100DE5D94 /* AppDelegate.swift in Sources */,
 				51584557214FBDF900DE5D94 /* FeelingCondition.swift in Sources */,
@@ -409,6 +416,7 @@
 				515844EE214F474400DE5D94 /* UnkoFeelingsTests.swift in Sources */,
 				51039FCD21533BB800FBF04E /* LogCellModelFactoryTests.swift in Sources */,
 				5158456B2151096D00DE5D94 /* InputViewModelTests.swift in Sources */,
+				51E2615521538EFA004F4995 /* DocumentsFeelingRepositoryTests.swift in Sources */,
 				51E261512153822D004F4995 /* FeelingEntityTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

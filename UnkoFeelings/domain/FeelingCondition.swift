@@ -1,4 +1,4 @@
-enum FeelingCondition {
+enum FeelingCondition: String, Codable {
     case normal
     case soft
     case hard

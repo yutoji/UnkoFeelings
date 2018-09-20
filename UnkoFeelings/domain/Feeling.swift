@@ -3,7 +3,7 @@ import Foundation
 // This is 'value-object' to get view-layer enable to communicate with domain.
 // For 'entity' purpose, use FeelingEntity instead.
 
-struct Feeling {
+struct Feeling: Codable {
     var message: String
     var condition: FeelingCondition
     var postedAt: Date

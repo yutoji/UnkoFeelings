@@ -5,6 +5,13 @@ protocol FeelingEntity {
     var feeling: Feeling { get }
 }
 
+extension FeelingEntity {
+    // Use caution this is not the reference equality
+    func contentEquals(_ other: FeelingEntity) -> Bool {
+        return id == other.id && feeling == other.feeling
+    }
+}
+
 class FeelingEntityImpl: FeelingEntity {
     var id: String
     var feeling: Feeling
