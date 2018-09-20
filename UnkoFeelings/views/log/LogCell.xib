@@ -23,10 +23,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ik4-lN-rS3" userLabel="Balloon">
-                                <rect key="frame" x="80" y="8" width="232" height="64"/>
+                                <rect key="frame" x="80" y="8" width="85" height="36.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pQf-Lt-gZQ" userLabel="Message">
-                                        <rect key="frame" x="8" y="8" width="216" height="48"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" text="Message" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pQf-Lt-gZQ" userLabel="Message">
+                                        <rect key="frame" x="8" y="8" width="69" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -52,11 +52,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ik4-lN-rS3" firstAttribute="top" secondItem="WAF-wm-0Gq" secondAttribute="top" constant="8" id="8na-MU-zpG"/>
-                            <constraint firstAttribute="bottom" secondItem="ik4-lN-rS3" secondAttribute="bottom" constant="8" id="9uV-aE-bQo"/>
+                            <constraint firstAttribute="bottom" secondItem="ik4-lN-rS3" secondAttribute="bottom" priority="999" constant="8" id="9uV-aE-bQo"/>
                             <constraint firstItem="FBg-tG-9bc" firstAttribute="top" secondItem="WAF-wm-0Gq" secondAttribute="top" constant="8" id="KLE-T7-zBS"/>
-                            <constraint firstAttribute="height" priority="999" constant="80" identifier="CellHeight" id="el1-4H-HLO"/>
+                            <constraint firstAttribute="height" constant="80" identifier="CellHeight" id="el1-4H-HLO"/>
                             <constraint firstItem="ik4-lN-rS3" firstAttribute="leading" secondItem="FBg-tG-9bc" secondAttribute="trailing" constant="8" id="lqt-3F-WNc"/>
-                            <constraint firstAttribute="trailing" secondItem="ik4-lN-rS3" secondAttribute="trailing" constant="8" id="oIV-DD-RbG"/>
+                            <constraint firstAttribute="trailing" secondItem="ik4-lN-rS3" secondAttribute="trailing" priority="999" constant="8" id="oIV-DD-RbG"/>
                             <constraint firstItem="FBg-tG-9bc" firstAttribute="leading" secondItem="WAF-wm-0Gq" secondAttribute="leading" constant="8" id="wH4-4j-7dd"/>
                         </constraints>
                     </view>
@@ -70,6 +70,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="_balloon" destination="ik4-lN-rS3" id="ukF-RT-cNu"/>
                 <outlet property="_cellHeightConstraint" destination="el1-4H-HLO" id="lcD-sP-XUH"/>
                 <outlet property="_iconLayer" destination="FBg-tG-9bc" id="58B-sE-i74"/>
                 <outlet property="_messageLabel" destination="pQf-Lt-gZQ" id="k0M-rZ-ygx"/>

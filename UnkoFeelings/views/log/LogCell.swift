@@ -5,8 +5,10 @@ class LogCell: UITableViewCell {
 
     @IBOutlet weak var _cellHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var _messageLabel: UILabel!
+    @IBOutlet weak var _balloon: UIView!
     @IBOutlet weak var _iconLayer: UIView!
 
+    let balloonCornerRadius: CGFloat = 4.0
     //ISSUE: Should use IBOutlet constraint instead?
     let iconLayerSize: CGSize = CGSize(width: 64.0, height: 64.0)
     let cellMinHeight: CGFloat = 8.0 + 64 + 8
@@ -19,6 +21,10 @@ class LogCell: UITableViewCell {
         didSet {
             _update()
         }
+    }
+
+    override func awakeFromNib() {
+        _balloon.layer.cornerRadius = balloonCornerRadius
     }
 
     private func _update() {
