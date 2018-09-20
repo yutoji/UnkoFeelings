@@ -22,11 +22,12 @@ class FeelingTimelineTests: XCTestCase {
     }
 
     private func _setupTimeline(withDefaultFeelings feelings: [Feeling] = []) {
-        let entityCreator = FeelingEntityCreator()
+        let idGenerator = StubUniqueIDGenerator()
+        let entityCreator = FeelingEntityCreator(uniqueIDGenerator: idGenerator)
         let repository = MemoryFeelingRepository(entityCreator)
         var nextEntityId:Int = 1
         let entities = feelings.map() { (feeling) -> FeelingEntity in
-            let entity = FeelingEntityImpl(id: nextEntityId, feeling: feeling)
+            let entity = FeelingEntityImpl(id: idGenerator.generate(), feeling: feeling)
             nextEntityId += 1
             return entity
         }
@@ -39,7 +40,6 @@ class FeelingTimelineTests: XCTestCase {
     }
     
     func testInitialFeelingsState() {
-        _setupTimeline(withDefaultFeelings: [])
         XCTAssertEqual(_timeline.feelings, [Feeling]())
 
         _setupTimeline(withDefaultFeelings: _sampleFeelings)
@@ -51,8 +51,6 @@ class FeelingTimelineTests: XCTestCase {
     }
 
     func testAdd() {
-        _setupTimeline(withDefaultFeelings: [])
-
         _timeline.addFeeling(feeling: _sampleFeelings[0])
         XCTAssertEqual(_timeline.feelings, _sampleFeelingsByIndices([0]))
 
@@ -87,36 +85,30 @@ class FeelingTimelineTests: XCTestCase {
     }
 
     func testEntityIdOrder() {
-        _setupTimeline(withDefaultFeelings: [])
-
         _timeline.addFeeling(feeling: _sampleFeelings[0])
         _timeline.addFeeling(feeling: _sampleFeelings[1])
         _timeline.addFeeling(feeling: _sampleFeelings[2])
         let ids = _timeline.entities.map({$0.id})
-        XCTAssertEqual(ids, [1, 2, 3])
+        XCTAssertEqual(ids, ["1", "2", "3"])
     }
 
     func testEntityIdOrderWithReverseAdding() {
-        _setupTimeline(withDefaultFeelings: [])
-
         _timeline.addFeeling(feeling: _sampleFeelings[2])
         _timeline.addFeeling(feeling: _sampleFeelings[1])
         _timeline.addFeeling(feeling: _sampleFeelings[0])
         let ids = _timeline.entities.map({$0.id}) // will be reversed by postedAt-sort
-        XCTAssertEqual(ids, [3, 2, 1])
+        XCTAssertEqual(ids, ["3", "2", "1"])
     }
 
     func testEntityIdOrderInCaseRepositoryInitiallyHasEntities() {
         _setupTimeline(withDefaultFeelings: [Feeling](_sampleFeelings[0...1]).reversed())
-        XCTAssertEqual(_timeline.entities.map({$0.id}), [2, 1])
+        XCTAssertEqual(_timeline.entities.map({$0.id}), ["2", "1"])
 
         _timeline.addFeeling(feeling: _sampleFeelings[2])
-        XCTAssertEqual(_timeline.entities.map({$0.id}), [2, 1, 3])
+        XCTAssertEqual(_timeline.entities.map({$0.id}), ["2", "1", "3"])
     }
 
     func testArrayEqualityBetweenEntitiesAndFeelings() {
-        _setupTimeline(withDefaultFeelings: [])
-
         _timeline.addFeeling(feeling: _sampleFeelings[1])
         _timeline.addFeeling(feeling: _sampleFeelings[2])
         _timeline.addFeeling(feeling: _sampleFeelings[0])

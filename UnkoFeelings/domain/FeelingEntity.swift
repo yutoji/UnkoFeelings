@@ -1,29 +1,33 @@
 import Foundation
 
 protocol FeelingEntity {
-    var id: Int { get }
+    var id: String { get }
     var feeling: Feeling { get }
 }
 
 class FeelingEntityImpl: FeelingEntity {
-    var id: Int
+    var id: String
     var feeling: Feeling
 
-    init(id: Int, feeling: Feeling) {
+    init(id: String, feeling: Feeling) {
         self.id = id
         self.feeling = feeling
     }
 }
 
 protocol FeelingEntityCreatable {
-    func create(id: Int, feeling: Feeling) -> FeelingEntity
+    func create(feeling: Feeling) -> FeelingEntity
 }
 
 class FeelingEntityCreator: FeelingEntityCreatable {
-    private var _createdIds: [Int] = []
-    func create(id: Int, feeling: Feeling) -> FeelingEntity {
-        assert(_createdIds.index(of: id) == nil, "id dup. \(id) in \(_createdIds)")
-        _createdIds.append(id)
+    private var _uniqueIDGenerator: UniqueIDGenerator
+
+    init(uniqueIDGenerator: UniqueIDGenerator) {
+        _uniqueIDGenerator = uniqueIDGenerator
+    }
+
+    func create(feeling: Feeling) -> FeelingEntity {
+        let id = _uniqueIDGenerator.generate()
         return FeelingEntityImpl(id: id, feeling: feeling)
     }
 }

@@ -1,7 +1,7 @@
 import Foundation
 
 class LogCellModelFactory {
-    private var _entityIdToCellModel: [Int:LogCellModel] = [:]
+    private var _entityIdToCellModel: [String:LogCellModel] = [:]
 
     func getOrCreate(entity: FeelingEntity) -> LogCellModel {
         if let model = _entityIdToCellModel[entity.id] {
