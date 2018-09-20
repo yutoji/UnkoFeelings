@@ -12,7 +12,7 @@ class InputViewModelTests: XCTestCase {
     override func setUp() {
         super.setUp()
         let entityCreator = FeelingEntityCreator(uniqueIDGenerator: StubUniqueIDGenerator())
-        _timeline = FeelingTimelineImpl(repository: MemoryFeelingRepository(entityCreator), entityCreator: entityCreator)
+        _timeline = FeelingTimelineImpl(repository: VolatileFeelingRepository(entityCreator), entityCreator: entityCreator)
         _viewModel = InputViewModel(timeline: _timeline)
         _delegate = _InputViewModelDelegate()
         _viewModel.delegate = _delegate

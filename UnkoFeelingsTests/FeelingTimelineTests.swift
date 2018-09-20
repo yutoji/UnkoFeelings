@@ -24,7 +24,7 @@ class FeelingTimelineTests: XCTestCase {
     private func _setupTimeline(withDefaultFeelings feelings: [Feeling] = []) {
         let idGenerator = StubUniqueIDGenerator()
         let entityCreator = FeelingEntityCreator(uniqueIDGenerator: idGenerator)
-        let repository = MemoryFeelingRepository(entityCreator)
+        let repository = VolatileFeelingRepository(entityCreator)
         var nextEntityId:Int = 1
         let entities = feelings.map() { (feeling) -> FeelingEntity in
             let entity = FeelingEntityImpl(id: idGenerator.generate(), feeling: feeling)

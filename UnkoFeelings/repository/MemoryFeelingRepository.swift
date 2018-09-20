@@ -1,6 +1,6 @@
 import Foundation
 
-class MemoryFeelingRepository: FeelingRepository {
+class VolatileFeelingRepository: FeelingRepository {
     private var _entities: [FeelingEntity] = []
     private var _creator: FeelingEntityCreatable
 
@@ -8,7 +8,7 @@ class MemoryFeelingRepository: FeelingRepository {
         _creator = entityCreator
     }
 
-    func insertMockData() -> MemoryFeelingRepository {
+    func insertMockData() -> VolatileFeelingRepository {
         _entities.append(_creator.create(feeling: Feeling(message: "HelloUnko1", condition: .normal, postedAt: Date(timeIntervalSinceNow: -3))))
         _entities.append(_creator.create(feeling: Feeling(message: "HelloUnko2", condition: .normal, postedAt: Date(timeIntervalSinceNow: -2))))
         _entities.append(_creator.create(feeling: Feeling(message: "HelloUnko3\nThis\nIs\n3", condition: .normal, postedAt: Date(timeIntervalSinceNow: -1))))
