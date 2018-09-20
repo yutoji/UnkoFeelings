@@ -16,7 +16,7 @@ class ViewController: UITabBarController, FeelingTimelineDelegate {
         _setupFeelingTimeline()
 
         _inputViewController.timeline = _feelingTimeline
-        _logViewController.feelingTimeline = _feelingTimeline
+        _logViewController.timeline = _feelingTimeline
         _feelingTimeline.delegate = self
     }
 

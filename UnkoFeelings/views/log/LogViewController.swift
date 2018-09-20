@@ -8,7 +8,7 @@ class LogViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         }
     }
 
-    var feelingTimeline: FeelingTimeline! {
+    var timeline: FeelingTimeline! {
         didSet { _initCellModels() }
     }
 
@@ -16,7 +16,7 @@ class LogViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     private var _modelFactory: LogCellModelFactory = LogCellModelFactory()
 
     private func _initCellModels() {
-        _cellModels = feelingTimeline.entities.map() { (entity) -> LogCellModel in
+        _cellModels = timeline.entities.map() { (entity) -> LogCellModel in
             return _modelFactory.getOrCreate(entity: entity)
         }
     }
