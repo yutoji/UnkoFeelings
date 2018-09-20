@@ -11,7 +11,8 @@ class InputViewModelTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        _timeline = FeelingTimelineImpl(repository: MemoryFeelingRepository())
+        let entityCreator = FeelingEntityCreator()
+        _timeline = FeelingTimelineImpl(repository: MemoryFeelingRepository(entityCreator), entityCreator: entityCreator)
         _viewModel = InputViewModel(timeline: _timeline)
         _delegate = _InputViewModelDelegate()
         _viewModel.delegate = _delegate

@@ -22,7 +22,8 @@ class FeelingTimelineTests: XCTestCase {
     }
 
     private func _setupTimeline(withDefaultFeelings feelings: [Feeling] = []) {
-        let repository = MemoryFeelingRepository()
+        let entityCreator = FeelingEntityCreator()
+        let repository = MemoryFeelingRepository(entityCreator)
         var nextEntityId:Int = 1
         let entities = feelings.map() { (feeling) -> FeelingEntity in
             let entity = FeelingEntityImpl(id: nextEntityId, feeling: feeling)
@@ -30,7 +31,7 @@ class FeelingTimelineTests: XCTestCase {
             return entity
         }
         repository.update(entities: entities)
-        _timeline = FeelingTimelineImpl(repository: repository)
+        _timeline = FeelingTimelineImpl(repository: repository, entityCreator: entityCreator)
     }
     
     override func tearDown() {

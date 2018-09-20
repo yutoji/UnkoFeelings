@@ -14,3 +14,16 @@ class FeelingEntityImpl: FeelingEntity {
         self.feeling = feeling
     }
 }
+
+protocol FeelingEntityCreatable {
+    func create(id: Int, feeling: Feeling) -> FeelingEntity
+}
+
+class FeelingEntityCreator: FeelingEntityCreatable {
+    private var _createdIds: [Int] = []
+    func create(id: Int, feeling: Feeling) -> FeelingEntity {
+        assert(_createdIds.index(of: id) == nil, "id dup. \(id) in \(_createdIds)")
+        _createdIds.append(id)
+        return FeelingEntityImpl(id: id, feeling: feeling)
+    }
+}
