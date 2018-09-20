@@ -4,7 +4,6 @@ class DocumentsFeelingRepository: FeelingRepository {
 
     public static let DEFAULT_FILE_BASENAME = "feeling_entities.json"
     private let _customFilepath: URL?
-    private var _objectPool: [String:FeelingEntity] = [:]
 
     init(filepathToSave: URL? = nil) {
         // use FileManager.default.temporaryDirectory for tests
