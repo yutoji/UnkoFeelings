@@ -33,6 +33,7 @@
 		515845782151207B00DE5D94 /* ViewUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515845772151207B00DE5D94 /* ViewUtil.swift */; };
 		5174F71B215127AD00BDB119 /* LogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5174F71A215127AD00BDB119 /* LogCell.swift */; };
 		5174F71D2152494400BDB119 /* DeviceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5174F71C2152494400BDB119 /* DeviceService.swift */; };
+		5174F7212152742B00BDB119 /* FeelingEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5174F7202152742B00BDB119 /* FeelingEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		515845772151207B00DE5D94 /* ViewUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewUtil.swift; sourceTree = "<group>"; };
 		5174F71A215127AD00BDB119 /* LogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogCell.swift; sourceTree = "<group>"; };
 		5174F71C2152494400BDB119 /* DeviceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceService.swift; sourceTree = "<group>"; };
+		5174F7202152742B00BDB119 /* FeelingEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeelingEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +195,7 @@
 		51584553214FBD0700DE5D94 /* domain */ = {
 			isa = PBXGroup;
 			children = (
+				5174F7202152742B00BDB119 /* FeelingEntity.swift */,
 				51584554214FBD1C00DE5D94 /* Feeling.swift */,
 				51584556214FBDF900DE5D94 /* FeelingCondition.swift */,
 				5158455C214FE29800DE5D94 /* FeelingRepository.swift */,
@@ -369,6 +372,7 @@
 				515845752151200500DE5D94 /* LogCellModel.swift in Sources */,
 				515844DE214F474100DE5D94 /* UnkoFeelings.xcdatamodeld in Sources */,
 				5174F71B215127AD00BDB119 /* LogCell.swift in Sources */,
+				5174F7212152742B00BDB119 /* FeelingEntity.swift in Sources */,
 				51584549214F849000DE5D94 /* LogViewController.swift in Sources */,
 				51584547214F845700DE5D94 /* InputViewController.swift in Sources */,
 				5158455D214FE29800DE5D94 /* FeelingRepository.swift in Sources */,

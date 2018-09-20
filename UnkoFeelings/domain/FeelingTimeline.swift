@@ -1,6 +1,7 @@
 protocol FeelingTimeline {
     var delegate: FeelingTimelineDelegate? { get set }
-    var feelings: [Feeling] { get }
+    var entities: [FeelingEntity] { get }   // Entities
+    var feelings: [Feeling] { get }         // Value objects
 }
 
 protocol FeelingTimelineDelegate : class {
@@ -9,47 +10,54 @@ protocol FeelingTimelineDelegate : class {
 
 protocol FeelingTimelineUpdatable {
     func addFeeling(feeling: Feeling)
-    func removeFeeling(feeling: Feeling)
+    func removeFeeling(entity: FeelingEntity)
 }
 
 class FeelingTimelineImpl: FeelingTimeline, FeelingTimelineUpdatable {
     weak var delegate: FeelingTimelineDelegate?
     private var _repository: FeelingRepository
-    private var _feelings: [Feeling]
+    private var _entities: [FeelingEntity]
+    private var _nextEntityId:Int
 
     init(repository: FeelingRepository) {
         _repository = repository
-        _feelings = repository.fetchFeelings()
+        _entities = repository.fetchEntities()
+        let lastEntityId = _entities.max(by: {$0.id < $1.id})?.id ?? 0
+        _nextEntityId = lastEntityId + 1
         _sortByPostedAt()
     }
 
+    var entities: [FeelingEntity] {
+        return _entities
+    }
     var feelings: [Feeling] {
-        return _feelings
+        return _entities.map({$0.feeling})
     }
 
     func addFeeling(feeling: Feeling) {
-        _feelings.insert(feeling, at: 0)
+        let entityId = _nextEntityId
+        let entity = FeelingEntityImpl(id: entityId, feeling: feeling)
+        _entities.insert(entity, at: 0)
         _sortByPostedAt()
+        _nextEntityId += 1
         _updateRepositoryWithCallingDelegate()
     }
 
-    func removeFeeling(feeling: Feeling) {
-        guard let targetIndex = _feelings.index(where: { (eachFeeling) in
-            return eachFeeling.postedAt == feeling.postedAt
-        }) else {
-            assert(false, "targetIndex not exists.\(feeling)")
+    func removeFeeling(entity: FeelingEntity) {
+        guard let targetIndex = _entities.index(where: {$0.id == entity.id}) else {
+            assert(false, "targetIndex not exists.\(entity)")
             return
         }
-        _feelings.remove(at: targetIndex)
+        _entities.remove(at: targetIndex)
         _updateRepositoryWithCallingDelegate()
     }
 
     private func _updateRepositoryWithCallingDelegate() {
-        _repository.updateFeelings(feelings: _feelings)
+        _repository.update(entities: _entities)
         delegate?.onFeelingTimelineUpdated()
     }
 
     private func _sortByPostedAt() {
-        _feelings.sort(by: {$0.postedAt > $1.postedAt})
+        _entities.sort(by: {$0.feeling.postedAt > $1.feeling.postedAt})
     }
 }

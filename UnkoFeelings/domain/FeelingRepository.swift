@@ -1,4 +1,4 @@
 protocol FeelingRepository {
-    func fetchFeelings() -> [Feeling]
-    func updateFeelings(feelings: [Feeling])
+    func fetchEntities() -> [FeelingEntity]
+    func update(entities: [FeelingEntity])
 }
