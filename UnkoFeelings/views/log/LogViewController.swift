@@ -13,10 +13,11 @@ class LogViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     }
 
     private var _cellModels: [LogCellModel]!
+    private var _modelFactory: LogCellModelFactory = LogCellModelFactory()
 
     private func _initCellModels() {
         _cellModels = feelingTimeline.entities.map() { (entity) -> LogCellModel in
-            return LogCellModel(feeling: entity.feeling)
+            return _modelFactory.getOrCreate(entity: entity)
         }
     }
 

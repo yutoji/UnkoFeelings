@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51039FC921533AFC00FBF04E /* LogCellModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51039FC821533AFC00FBF04E /* LogCellModelFactory.swift */; };
+		51039FCD21533BB800FBF04E /* LogCellModelFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51039FCC21533BB800FBF04E /* LogCellModelFactoryTests.swift */; };
 		515844D6214F474100DE5D94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515844D5214F474100DE5D94 /* AppDelegate.swift */; };
 		515844D8214F474100DE5D94 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515844D7214F474100DE5D94 /* ViewController.swift */; };
 		515844DB214F474100DE5D94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 515844D9214F474100DE5D94 /* Main.storyboard */; };
@@ -54,6 +56,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		51039FC821533AFC00FBF04E /* LogCellModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogCellModelFactory.swift; sourceTree = "<group>"; };
+		51039FCC21533BB800FBF04E /* LogCellModelFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogCellModelFactoryTests.swift; sourceTree = "<group>"; };
 		515844D2214F474100DE5D94 /* UnkoFeelings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnkoFeelings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		515844D5214F474100DE5D94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		515844D7214F474100DE5D94 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -158,6 +162,7 @@
 				51584558214FD48D00DE5D94 /* FeelingTests.swift */,
 				51584564214FF19B00DE5D94 /* FeelingTimelineTests.swift */,
 				5158456A2151096D00DE5D94 /* InputViewModelTests.swift */,
+				51039FCC21533BB800FBF04E /* LogCellModelFactoryTests.swift */,
 			);
 			path = UnkoFeelingsTests;
 			sourceTree = "<group>";
@@ -220,6 +225,7 @@
 				5158457121511AD400DE5D94 /* LogCell.xib */,
 				5174F71A215127AD00BDB119 /* LogCell.swift */,
 				515845742151200500DE5D94 /* LogCellModel.swift */,
+				51039FC821533AFC00FBF04E /* LogCellModelFactory.swift */,
 			);
 			path = log;
 			sourceTree = "<group>";
@@ -372,6 +378,7 @@
 				515845752151200500DE5D94 /* LogCellModel.swift in Sources */,
 				515844DE214F474100DE5D94 /* UnkoFeelings.xcdatamodeld in Sources */,
 				5174F71B215127AD00BDB119 /* LogCell.swift in Sources */,
+				51039FC921533AFC00FBF04E /* LogCellModelFactory.swift in Sources */,
 				5174F7212152742B00BDB119 /* FeelingEntity.swift in Sources */,
 				51584549214F849000DE5D94 /* LogViewController.swift in Sources */,
 				51584547214F845700DE5D94 /* InputViewController.swift in Sources */,
@@ -393,6 +400,7 @@
 				51584559214FD48D00DE5D94 /* FeelingTests.swift in Sources */,
 				51584565214FF19B00DE5D94 /* FeelingTimelineTests.swift in Sources */,
 				515844EE214F474400DE5D94 /* UnkoFeelingsTests.swift in Sources */,
+				51039FCD21533BB800FBF04E /* LogCellModelFactoryTests.swift in Sources */,
 				5158456B2151096D00DE5D94 /* InputViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
