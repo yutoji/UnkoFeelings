@@ -1,5 +1,3 @@
-//
-
 import UIKit
 
 class ViewController: UITabBarController, FeelingTimelineDelegate {
@@ -17,7 +15,7 @@ class ViewController: UITabBarController, FeelingTimelineDelegate {
 
         _inputViewController.timeline = _feelingTimeline
         _logViewController.timeline = _feelingTimeline
-        _feelingTimeline.delegate = self
+        _feelingTimeline.delegates.add(delegate: self)
     }
 
     private func _setupViewControllers() {
@@ -27,7 +25,7 @@ class ViewController: UITabBarController, FeelingTimelineDelegate {
 
     private func _setupFeelingTimeline() {
         let entityCreator = FeelingEntityCreator(uniqueIDGenerator: DeviceUniqueIDGenerator())
-        _repository = VolatileFeelingRepository(entityCreator).insertMockData() // TODO: replace to actual repository object
+        _repository = DocumentsFeelingRepository()
         _feelingTimeline = FeelingTimelineImpl(repository: _repository, entityCreator: entityCreator)
     }
 

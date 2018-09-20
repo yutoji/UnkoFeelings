@@ -1,5 +1,5 @@
 protocol FeelingTimeline {
-    var delegate: FeelingTimelineDelegate? { get set }
+    var delegates: DelegateContainer<FeelingTimelineDelegate> { get set }
     var entities: [FeelingEntity] { get }   // Entities
     var feelings: [Feeling] { get }         // Value objects
 }
@@ -14,7 +14,7 @@ protocol FeelingTimelineUpdatable {
 }
 
 class FeelingTimelineImpl: FeelingTimeline, FeelingTimelineUpdatable {
-    weak var delegate: FeelingTimelineDelegate?
+    var delegates = DelegateContainer<FeelingTimelineDelegate>()
     private var _repository: FeelingRepository
     private var _entities: [FeelingEntity]
     private var _creator: FeelingEntityCreatable
@@ -51,7 +51,7 @@ class FeelingTimelineImpl: FeelingTimeline, FeelingTimelineUpdatable {
 
     private func _updateRepositoryWithCallingDelegate() {
         _repository.update(entities: _entities)
-        delegate?.onFeelingTimelineUpdated()
+        delegates.doEachDelegate({ $0.onFeelingTimelineUpdated() })
     }
 
     private func _sortByPostedAt() {

@@ -1,6 +1,6 @@
 import UIKit
 
-class LogViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class LogViewController: UIViewController {
 
     @IBOutlet var tableView: UITableView! {
         didSet {
@@ -9,7 +9,10 @@ class LogViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     }
 
     var timeline: FeelingTimeline! {
-        didSet { _initCellModels() }
+        didSet {
+            _initCellModels()
+            timeline.delegates.add(delegate: self)
+        }
     }
 
     private var _cellModels: [LogCellModel]!
@@ -20,10 +23,15 @@ class LogViewController: UIViewController, UITableViewDelegate, UITableViewDataS
             return _modelFactory.getOrCreate(entity: entity)
         }
     }
+}
 
+//MARK: - UITableViewDelegate
+extension LogViewController: UITableViewDelegate {
     //TODO: Implement estimatedRowHeight and etc.
+}
 
-    //MARK: - UITableViewDataSource
+//MARK: - UITableViewDataSource
+extension LogViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return _cellModels.count
@@ -37,5 +45,12 @@ class LogViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         logCell.model = cellModel
         return logCell
     }
+}
 
+//MARK: - FeelingTimelineDelegate
+extension LogViewController : FeelingTimelineDelegate {
+    func onFeelingTimelineUpdated() {
+        _initCellModels()
+        tableView.reloadData()
+    }
 }
