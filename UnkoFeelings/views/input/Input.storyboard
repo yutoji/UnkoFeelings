@@ -72,7 +72,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="X8F-Cx-472"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="記録する" id="Jv6-jC-IeV"/>
+                    <tabBarItem key="tabBarItem" title="記録" image="pencil-7" id="Jv6-jC-IeV"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="_inputTextView" destination="WBu-IA-JeZ" id="r8O-wJ-Jkf"/>
@@ -85,6 +85,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="pencil-7" width="30" height="30"/>
         <image name="unchi_character_yawarakai" width="400" height="279"/>
     </resources>
 </document>

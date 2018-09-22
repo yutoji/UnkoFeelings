@@ -22,7 +22,7 @@
                             <outlet property="delegate" destination="Mkm-c8-IZF" id="Dp3-6c-Wae"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="ログ" id="fXf-mk-gba"/>
+                    <tabBarItem key="tabBarItem" title="ログ" image="connectivity-bar-7" id="fXf-mk-gba"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="Tcc-Kt-GPk" id="v95-v6-OQk"/>
@@ -33,4 +33,7 @@
             <point key="canvasLocation" x="202" y="174"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="connectivity-bar-7" width="30" height="30"/>
+    </resources>
 </document>
