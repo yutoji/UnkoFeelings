@@ -1,10 +1,14 @@
 import Foundation
 import UIKit
 
-//TODO: Make tests
 class LogCellModel {
     private var _feeling: Feeling
-    private var _conditionImages = [FeelingCondition:UIImage]()
+
+    private static var __conditionImages = [FeelingCondition:UIImage]()
+    private var _conditionImages: [FeelingCondition:UIImage] {
+        get { return LogCellModel.__conditionImages }
+        set { LogCellModel.__conditionImages = newValue }
+    }
 
     init(feeling: Feeling) {
         _feeling = feeling
