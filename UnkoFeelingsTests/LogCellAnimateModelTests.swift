@@ -10,9 +10,9 @@ class LogCellAnimateModelTests: XCTestCase {
         super.setUp()
         _init()
     }
-    private func _init(_ startProgressRatio: Double = 0.0) {
+    private func _init() {
         _progress = StubTimeProgress()
-        _model = LogCellAnimateModel(startProgressRatio: startProgressRatio, progress: _progress)
+        _model = LogCellAnimateModel(progress: _progress)
     }
 
     func testState() {
@@ -30,7 +30,7 @@ class LogCellAnimateModelTests: XCTestCase {
     }
 
     func testStateAfterStart() {
-        _model.startProgressTimer()
+        _model.startProgressTimer(startProgressRatio: 0.0)
         XCTAssertFalse(_model.state.enableStart)
         XCTAssertTrue(_model.state.hasStarted)
     }
@@ -38,7 +38,7 @@ class LogCellAnimateModelTests: XCTestCase {
     func testStart() {
         var info: LogCellAnimateModel.ViewInfo!
 
-        _model.startProgressTimer()
+        _model.startProgressTimer(startProgressRatio: 0.0)
         info = _model.viewInfo
         XCTAssertTrue(info.needsAnimate)
         XCTAssertEqual(info.progressedRatio, 0.0)
@@ -65,7 +65,7 @@ class LogCellAnimateModelTests: XCTestCase {
 
     func testStartAfterProgressed() {
         _progress.progressRatio = 0.5
-        _model.startProgressTimer()
+        _model.startProgressTimer(startProgressRatio: 0.0)
         let info = _model.viewInfo
         XCTAssertTrue(info.needsAnimate)
         XCTAssertEqual(info.progressedRatio, 0.5)
@@ -74,7 +74,7 @@ class LogCellAnimateModelTests: XCTestCase {
 
     func testStartAfterOverProgressed() {
         _progress.progressRatio = 1.0
-        _model.startProgressTimer()
+        _model.startProgressTimer(startProgressRatio: 0.0)
         var info = _model.viewInfo
         XCTAssertFalse(info.needsAnimate)
         XCTAssertEqual(info.progressedRatio, 1.0)
@@ -82,7 +82,7 @@ class LogCellAnimateModelTests: XCTestCase {
 
         _init()
         _progress.progressRatio = 1.1
-        _model.startProgressTimer()
+        _model.startProgressTimer(startProgressRatio: 0.0)
         info = _model.viewInfo
         XCTAssertFalse(info.needsAnimate)
         XCTAssertEqual(info.progressedRatio, 1.0)
@@ -90,8 +90,7 @@ class LogCellAnimateModelTests: XCTestCase {
     }
 
     func testProgressStartArgs() {
-        _init(0.5)
-        _model.startProgressTimer()
+        _model.startProgressTimer(startProgressRatio: 0.5)
         XCTAssertEqual(_progress._startedArgs.0, _model.ANIMATION_DURATION)
         XCTAssertEqual(_progress._startedArgs.1, -0.5)
     }

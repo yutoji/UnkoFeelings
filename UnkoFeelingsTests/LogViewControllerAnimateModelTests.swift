@@ -6,7 +6,7 @@ import XCTest
 class LogViewControllerAnimateModelTests: XCTestCase {
     
     func testOffsetRatio() {
-        let model = LogViewControllerAnimateModel(numAnimateCell: 5)
+        let model = LogViewControllerAnimateOffsetIterator(numAnimateCell: 5)
         XCTAssertEqual(model.publishNextAnimateOffsetRatio(), 0.0)
         XCTAssertEqual(model.publishNextAnimateOffsetRatio(), 0.2)
         XCTAssertEqual(model.publishNextAnimateOffsetRatio(), 0.4)
@@ -17,7 +17,7 @@ class LogViewControllerAnimateModelTests: XCTestCase {
 
         let waitInterval = 0.1
         let resetExpectation = expectation(description: "reset")
-        DispatchQueue.main.asyncAfter(deadline: .now() + LogViewControllerAnimateModel.RESET_DELAY) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + LogViewControllerAnimateOffsetIterator.RESET_DELAY) {
             XCTAssertEqual(model.publishNextAnimateOffsetRatio(), 0.0)
             XCTAssertEqual(model.publishNextAnimateOffsetRatio(), 0.2)
             resetExpectation.fulfill()

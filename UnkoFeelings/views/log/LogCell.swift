@@ -55,11 +55,11 @@ class LogCell: UITableViewCell {
 
     var animateModel: LogCellAnimateModelProtocol? {
         didSet {
-            _startAnimate()
+            _beginAnimate()
         }
     }
 
-    private func _startAnimate() {
+    private func _beginAnimate() {
         guard let viewInfo = animateModel?.viewInfo else {
             assertionFailure()
             return

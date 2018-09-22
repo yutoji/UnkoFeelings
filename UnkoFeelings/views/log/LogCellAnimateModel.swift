@@ -10,12 +10,10 @@ class LogCellAnimateModel: LogCellAnimateModelProtocol {
     let ANIMATION_DURATION: TimeInterval = 1.0
 
     private var _progress: TimeProgressProtocol
-    private var _startProgressRatio: Double
     private var _state: State
 
-    init(startProgressRatio: Double, progress: TimeProgressProtocol) {
+    init(progress: TimeProgressProtocol) {
         assert(!progress.hasStarted)
-        _startProgressRatio = startProgressRatio
         _progress = progress
         _state = .notStarted
     }
@@ -31,9 +29,9 @@ class LogCellAnimateModel: LogCellAnimateModelProtocol {
         return _state
     }
 
-    func startProgressTimer() {
+    func startProgressTimer(startProgressRatio: Double) {
         assert(state.enableStart)
-        let startTimeOffset = -(_startProgressRatio * ANIMATION_DURATION)
+        let startTimeOffset = -(startProgressRatio * ANIMATION_DURATION)
         _progress.start(completeDuration: ANIMATION_DURATION, startOffset: startTimeOffset)
         _state = .started
     }

@@ -18,39 +18,33 @@ class LogViewController: UIViewController {
     }
 
     private var _cellModels: [LogCellModel]!
-    private var _modelFactory: LogCellModelFactory = LogCellModelFactory()
+    private var _modelFactory = LogCellModelFactory()
+
+    private var _animateModels: [LogCellAnimateModel]!
+    private var _animateModelFactory = LogCellViewModelFactory()
+    private var _animateOffsetIterator = LogViewControllerAnimateOffsetIterator(numAnimateCell: 6)
 
     private func _initCellModels() {
-        _cellModels = timeline.entities.map() { (entity) -> LogCellModel in
-            let model = _modelFactory.getOrCreate(entity: entity)
-            return model
-        }
-    }
-
-    private var _animateModel = LogViewControllerAnimateModel(numAnimateCell: 6)
-
-    func _initCellAnimateModel(row: Int) -> LogCellAnimateModel {
-        let entity = timeline.entities[row]
-        if let cellAnimateModel = _animateModel.idTocellAnimateModel[entity.id] {
-            return cellAnimateModel
-        }
-        let startRatio = _animateModel.publishNextAnimateOffsetRatio()
-        let progress = TimeProgress(dateMaker: DateMaker())
-        let cellAnimateModel = LogCellAnimateModel(startProgressRatio: startRatio, progress: progress)
-        cellAnimateModel.startProgressTimer()
-        _animateModel.idTocellAnimateModel[entity.id] = cellAnimateModel
-        return cellAnimateModel
+        _cellModels = timeline.entities.map({ _modelFactory.getOrCreate(entity: $0) })
+        _animateModels = timeline.entities.map({ _animateModelFactory.getOrCreate(entity: $0) })
     }
 }
 
 //MARK: - UITableViewDelegate
 extension LogViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        let cell = cell as! LogCell
-        let cellAnimateModel = _initCellAnimateModel(row: indexPath.row)
-        cell.animateModel = cellAnimateModel
+        let animateModel = _animateModels[indexPath.row]
+        _startAnimateModelUnlessStarted(animateModel: animateModel)
+        let logCell = cell as! LogCell
+        logCell.animateModel = animateModel
     }
-    //TODO: Implement estimatedRowHeight and etc.
+
+    private func _startAnimateModelUnlessStarted(animateModel: LogCellAnimateModel) {
+        if !animateModel.state.hasStarted {
+            let startRatio = _animateOffsetIterator.publishNextAnimateOffsetRatio()
+            animateModel.startProgressTimer(startProgressRatio: startRatio)
+        }
+    }
 }
 
 //MARK: - UITableViewDataSource
@@ -81,7 +75,7 @@ extension LogViewController : FeelingTimelineDelegate {
     }
 }
 
-class LogViewControllerAnimateModel {
+class LogViewControllerAnimateOffsetIterator {
     static let RESET_DELAY: TimeInterval = TimeInterval.leastNonzeroMagnitude
     private let _numAnimateCell: Int
     private var _animateCellIndex: Int = 0
@@ -107,7 +101,4 @@ class LogViewControllerAnimateModel {
             self._hasResetReserved = false
         }
     }
-
-    /// FeelingEntity.id to LogCellAnimateModel
-    var idTocellAnimateModel: [String:LogCellAnimateModel] = [:]
 }

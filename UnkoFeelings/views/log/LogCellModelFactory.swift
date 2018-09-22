@@ -1,14 +1,57 @@
 import Foundation
 
 class LogCellModelFactory {
-    private var _entityIdToCellModel: [String:LogCellModel] = [:]
+    private let _factory: _CachedModelFactory<FeelingEntity, LogCellModel>
+
+    init() {
+        _factory = _CachedModelFactory(modelToId: { (entity) -> String in
+            return entity.id
+        }, createViewModel: { (entity) -> LogCellModel in
+            return LogCellModel(feeling: entity.feeling)
+        })
+    }
 
     func getOrCreate(entity: FeelingEntity) -> LogCellModel {
-        if let model = _entityIdToCellModel[entity.id] {
-            return model
+        return _factory.getOrCreate(model: entity)
+    }
+}
+
+class LogCellViewModelFactory {
+    private let _fatory: _CachedModelFactory<FeelingEntity, LogCellAnimateModel>
+
+    init() {
+        _fatory = _CachedModelFactory(modelToId: { (entity) -> String in
+            return entity.id
+        }, createViewModel: { (entity) -> LogCellAnimateModel in
+            let timeProgress = TimeProgress(dateMaker: DateMaker())
+            return LogCellAnimateModel(progress: timeProgress)
+        })
+    }
+
+    func getOrCreate(entity: FeelingEntity) -> LogCellAnimateModel {
+        return _fatory.getOrCreate(model: entity)
+    }
+}
+
+fileprivate class _CachedModelFactory<Model, ViewModel> {
+    private var _modelIdToViewModel: [String:ViewModel] = [:]
+
+    private let _modelToId: (Model) -> String
+    private let _createViewModel: (Model) -> ViewModel
+
+    init(modelToId: @escaping (Model) -> String, createViewModel: @escaping (Model) -> ViewModel) {
+        _modelToId = modelToId
+        _createViewModel = createViewModel
+    }
+
+    func getOrCreate(model: Model) -> ViewModel {
+        let modelId = _modelToId(model)
+
+        if _modelIdToViewModel[modelId] == nil {
+            let viewModel = _createViewModel(model)
+            _modelIdToViewModel[modelId] = viewModel
         }
-        let model = LogCellModel(feeling: entity.feeling)
-        _entityIdToCellModel[entity.id] = model
-        return model
+
+        return _modelIdToViewModel[modelId]!
     }
 }
