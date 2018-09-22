@@ -25,6 +25,7 @@ class LogCell: UITableViewCell {
     override func awakeFromNib() {
         _balloon.layer.cornerRadius = balloonCornerRadius
         _iconLayer.backgroundColor = nil
+        selectionStyle = .none
     }
 
     private func _update() {
