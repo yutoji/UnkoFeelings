@@ -27,6 +27,7 @@ class InputViewModelTests: XCTestCase {
         XCTAssertFalse(_viewModel.isSubmittable)
         XCTAssertEqual(_delegate.updateCalledCount, 0)
         XCTAssertEqual(_timeline.feelings.count, 0)
+        XCTAssertEqual(_viewModel.condition, .normal)
     }
 
     func testSubmittableFlag() {
@@ -60,6 +61,18 @@ class InputViewModelTests: XCTestCase {
         XCTAssertEqual(_timeline.feelings.count, 0)
     }
 
+    func testUpdatedDelegateCalledCountAfterConditionSet() {
+        XCTAssertEqual(_delegate.updateCalledCount, 0)
+        _viewModel.condition = .normal
+        XCTAssertEqual(_delegate.updateCalledCount, 1)
+        XCTAssertEqual(_viewModel.condition, .normal)
+
+        _viewModel.condition = .hard
+        XCTAssertEqual(_viewModel.condition, .hard)
+        _viewModel.condition = .hard
+        XCTAssertEqual(_delegate.updateCalledCount, 3)
+    }
+
     func testClearText() {
         XCTAssertEqual(_delegate.updateCalledCount, 0)
         _viewModel.text = "hello"
@@ -73,16 +86,19 @@ class InputViewModelTests: XCTestCase {
 
     func testSubmit() {
         _viewModel.text = "Hello, World."
-        XCTAssertEqual(_delegate.updateCalledCount, 1)
+        _viewModel.condition = .soft
+        XCTAssertEqual(_delegate.updateCalledCount, 2)
         XCTAssertTrue(_viewModel.isSubmittable)
         XCTAssertEqual(_timeline.feelings.count, 0)
         _viewModel.submit()
         XCTAssertEqual(_timeline.feelings.count, 1)
         XCTAssertEqual(_timeline.feelings[0].message, "Hello, World.")
+        XCTAssertEqual(_timeline.feelings[0].condition, .soft)
 
         // after submit, the text value must be cleared.
         XCTAssertEqual(_viewModel.text, "")
-        XCTAssertEqual(_delegate.updateCalledCount, 2)
+        XCTAssertEqual(_viewModel.condition, .soft, "Shouldn't change the condition after submit.")
+        XCTAssertEqual(_delegate.updateCalledCount, 3)
     }
 
 }

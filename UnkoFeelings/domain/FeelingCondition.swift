@@ -14,4 +14,12 @@ enum FeelingCondition: String, Codable {
         case   .hard: return "unchi_character_katai"
         }
     }
+
+    var pickerLabel: String {
+        switch self {
+        case .normal: return "ふつう"
+        case   .soft: return "やわらかい"
+        case   .hard: return "かたい"
+        }
+    }
 }

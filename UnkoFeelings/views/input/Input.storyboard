@@ -25,19 +25,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lSr-Sk-jaf">
-                                <rect key="frame" x="328" y="392" width="31" height="30"/>
-                                <state key="normal" title="記録"/>
-                                <connections>
-                                    <action selector="_onSubmit:" destination="20F-Ij-csh" eventType="touchUpInside" id="ebN-CB-Rfh"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="250" image="unchi_character_yawarakai" translatesAutoresizingMaskIntoConstraints="NO" id="sKi-1D-Xa5">
-                                <rect key="frame" x="67" y="83" width="240" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" priority="750" constant="128" id="dX6-oG-fwo"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="今日のうんこの気持ちを教えてください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uKd-rt-I7k" userLabel="aa">
                                 <rect key="frame" x="31" y="219" width="312" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -53,21 +40,52 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WNe-OU-79R">
+                                <rect key="frame" x="16" y="373" width="188" height="89"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="89" id="BZB-ee-ujp"/>
+                                    <constraint firstAttribute="width" constant="188" id="jDg-aT-RIp"/>
+                                </constraints>
+                            </pickerView>
+                            <view contentMode="scaleToFill" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="TFs-Qn-Pyt" userLabel="ConditionLayer">
+                                <rect key="frame" x="67" y="83" width="240" height="128"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="250" fixedFrame="YES" image="unchi_character_yawarakai" translatesAutoresizingMaskIntoConstraints="NO" id="sKi-1D-Xa5">
+                                        <rect key="frame" x="-80" y="0.0" width="400" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.47058823529999999" green="0.54901960780000003" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="500" constant="128" id="H5T-eK-HSK"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" priority="750" constant="128" id="SiA-kj-OMU"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lSr-Sk-jaf">
+                                <rect key="frame" x="328" y="402" width="31" height="30"/>
+                                <state key="normal" title="記録"/>
+                                <connections>
+                                    <action selector="_onSubmit:" destination="20F-Ij-csh" eventType="touchUpInside" id="ebN-CB-Rfh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="sKi-1D-Xa5" firstAttribute="top" secondItem="Jvj-dh-ged" secondAttribute="bottom" constant="8" symbolic="YES" id="34l-WA-P6J"/>
                             <constraint firstItem="uKd-rt-I7k" firstAttribute="centerX" secondItem="WBu-IA-JeZ" secondAttribute="centerX" id="47N-Nt-noy"/>
-                            <constraint firstItem="sKi-1D-Xa5" firstAttribute="leading" secondItem="X8F-Cx-472" secondAttribute="leading" constant="67" id="8VZ-pn-5iQ"/>
+                            <constraint firstItem="WNe-OU-79R" firstAttribute="centerY" secondItem="lSr-Sk-jaf" secondAttribute="centerY" id="5hE-kh-EqM"/>
                             <constraint firstItem="lSr-Sk-jaf" firstAttribute="trailing" secondItem="WBu-IA-JeZ" secondAttribute="trailing" id="8bX-0H-XsL"/>
                             <constraint firstItem="WBu-IA-JeZ" firstAttribute="trailing" secondItem="pXQ-l7-vE1" secondAttribute="trailingMargin" id="8vv-Eu-gfA"/>
-                            <constraint firstItem="uKd-rt-I7k" firstAttribute="top" secondItem="sKi-1D-Xa5" secondAttribute="bottom" constant="8" symbolic="YES" id="DAR-5q-qhJ"/>
                             <constraint firstItem="WBu-IA-JeZ" firstAttribute="top" secondItem="uKd-rt-I7k" secondAttribute="bottom" constant="16" id="M9e-BS-lN9"/>
+                            <constraint firstItem="TFs-Qn-Pyt" firstAttribute="leading" secondItem="X8F-Cx-472" secondAttribute="leading" constant="67" id="Nus-GE-4oQ"/>
+                            <constraint firstItem="Jvj-dh-ged" firstAttribute="centerX" secondItem="X8F-Cx-472" secondAttribute="centerX" id="O1J-nN-sWa"/>
+                            <constraint firstItem="TFs-Qn-Pyt" firstAttribute="top" secondItem="Jvj-dh-ged" secondAttribute="bottom" constant="8" id="SIx-M3-xJQ"/>
+                            <constraint firstItem="WNe-OU-79R" firstAttribute="leading" secondItem="X8F-Cx-472" secondAttribute="leading" constant="16" id="TIg-oi-jFB"/>
+                            <constraint firstItem="uKd-rt-I7k" firstAttribute="top" secondItem="TFs-Qn-Pyt" secondAttribute="bottom" constant="8" id="TcP-VV-8h8"/>
                             <constraint firstItem="WBu-IA-JeZ" firstAttribute="leading" secondItem="pXQ-l7-vE1" secondAttribute="leadingMargin" id="WPr-ef-EUl"/>
-                            <constraint firstItem="sKi-1D-Xa5" firstAttribute="centerX" secondItem="uKd-rt-I7k" secondAttribute="centerX" id="Zai-NU-cYM"/>
                             <constraint firstItem="Jvj-dh-ged" firstAttribute="top" secondItem="X8F-Cx-472" secondAttribute="top" constant="20" id="c0Y-Vv-o3n"/>
-                            <constraint firstItem="lSr-Sk-jaf" firstAttribute="top" secondItem="WBu-IA-JeZ" secondAttribute="bottom" constant="8" symbolic="YES" id="dVo-ZI-CTe"/>
-                            <constraint firstItem="Jvj-dh-ged" firstAttribute="centerX" secondItem="sKi-1D-Xa5" secondAttribute="centerX" id="fFl-LW-YjL"/>
+                            <constraint firstItem="lSr-Sk-jaf" firstAttribute="top" secondItem="WBu-IA-JeZ" secondAttribute="bottom" constant="18" id="dVo-ZI-CTe"/>
+                            <constraint firstItem="uKd-rt-I7k" firstAttribute="top" secondItem="TFs-Qn-Pyt" secondAttribute="bottom" constant="8" id="jg1-1V-RiR"/>
+                            <constraint firstItem="TFs-Qn-Pyt" firstAttribute="centerX" secondItem="X8F-Cx-472" secondAttribute="centerX" id="nrq-Ss-SBf"/>
                             <constraint firstItem="X8F-Cx-472" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="lSr-Sk-jaf" secondAttribute="bottom" constant="20" id="o1M-Tn-a5b"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="X8F-Cx-472"/>
@@ -75,7 +93,9 @@
                     <tabBarItem key="tabBarItem" title="記録" image="pencil-7" id="Jv6-jC-IeV"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="_conditionLayer" destination="TFs-Qn-Pyt" id="8OH-h3-sey"/>
                         <outlet property="_inputTextView" destination="WBu-IA-JeZ" id="r8O-wJ-Jkf"/>
+                        <outlet property="_pickerView" destination="WNe-OU-79R" id="35L-QB-0JD"/>
                         <outlet property="_submitButton" destination="lSr-Sk-jaf" id="gH1-eB-i8i"/>
                     </connections>
                 </viewController>
@@ -86,6 +106,6 @@
     </scenes>
     <resources>
         <image name="pencil-7" width="30" height="30"/>
-        <image name="unchi_character_yawarakai" width="400" height="279"/>
+        <image name="unchi_character_yawarakai" width="400" height="400"/>
     </resources>
 </document>
