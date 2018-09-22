@@ -23,7 +23,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ik4-lN-rS3" userLabel="Balloon">
-                                <rect key="frame" x="80" y="8" width="85" height="36.5"/>
+                                <rect key="frame" x="80" y="22" width="85" height="36.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" text="Message" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pQf-Lt-gZQ" userLabel="Message">
                                         <rect key="frame" x="8" y="8" width="69" height="20.5"/>
@@ -51,9 +51,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ik4-lN-rS3" firstAttribute="top" secondItem="WAF-wm-0Gq" secondAttribute="top" constant="8" id="8na-MU-zpG"/>
-                            <constraint firstAttribute="bottom" secondItem="ik4-lN-rS3" secondAttribute="bottom" priority="999" constant="8" id="9uV-aE-bQo"/>
+                            <constraint firstItem="ik4-lN-rS3" firstAttribute="centerY" secondItem="WAF-wm-0Gq" secondAttribute="centerY" priority="998" id="0Rf-To-snw"/>
                             <constraint firstItem="FBg-tG-9bc" firstAttribute="top" secondItem="WAF-wm-0Gq" secondAttribute="top" constant="8" id="KLE-T7-zBS"/>
+                            <constraint firstAttribute="bottom" secondItem="ik4-lN-rS3" secondAttribute="bottom" priority="999" constant="8" id="Mhr-t8-yXN"/>
+                            <constraint firstItem="ik4-lN-rS3" firstAttribute="top" secondItem="WAF-wm-0Gq" secondAttribute="top" priority="999" constant="8" id="RfN-mI-Jcw"/>
                             <constraint firstAttribute="height" constant="80" identifier="CellHeight" id="el1-4H-HLO"/>
                             <constraint firstItem="ik4-lN-rS3" firstAttribute="leading" secondItem="FBg-tG-9bc" secondAttribute="trailing" constant="8" id="lqt-3F-WNc"/>
                             <constraint firstAttribute="trailing" secondItem="ik4-lN-rS3" secondAttribute="trailing" priority="999" constant="8" id="oIV-DD-RbG"/>
@@ -62,7 +63,7 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="WAF-wm-0Gq" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="LoP-X2-AFC"/>
+                    <constraint firstAttribute="bottom" secondItem="WAF-wm-0Gq" secondAttribute="bottom" priority="999" id="3Fh-Yz-gxq"/>
                     <constraint firstAttribute="trailing" secondItem="WAF-wm-0Gq" secondAttribute="trailing" id="Z8u-d6-Rip"/>
                     <constraint firstItem="WAF-wm-0Gq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="fk6-26-BJi"/>
                     <constraint firstItem="WAF-wm-0Gq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="wOc-oo-qUN"/>

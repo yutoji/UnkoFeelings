@@ -5,6 +5,7 @@ class LogViewController: UIViewController {
     @IBOutlet var tableView: UITableView! {
         didSet {
             tableView.register(UINib(nibName: "LogCell", bundle: nil), forCellReuseIdentifier: "LogCell")
+            tableView.separatorStyle = .none
         }
     }
 

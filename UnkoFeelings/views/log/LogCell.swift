@@ -10,7 +10,6 @@ class LogCell: UITableViewCell {
 
     let balloonCornerRadius: CGFloat = 4.0
     //ISSUE: Should use IBOutlet constraint instead?
-    let iconLayerSize: CGSize = CGSize(width: 64.0, height: 64.0)
     let cellMinHeight: CGFloat = 8.0 + 64 + 8
     // the total margins for _messageLabel
     let labelSizeDifferenceWithCellHorizontal: CGFloat = 8.0 + 64 + 8 + 8 + 0 + 8 + 8
@@ -25,11 +24,18 @@ class LogCell: UITableViewCell {
 
     override func awakeFromNib() {
         _balloon.layer.cornerRadius = balloonCornerRadius
+        _iconLayer.backgroundColor = nil
     }
 
     private func _update() {
         _messageLabel.text = model.message
         _cellHeightConstraint.constant = _calcOptimizedCellHeight()
+
+        // setting FeelingCondition image
+        for subview in _iconLayer.subviews { subview.removeFromSuperview() }
+        let icon = UIImageView(image: model.conditionImage)
+        icon.frame.size = _iconLayer.frame.size
+        _iconLayer.addSubview(icon)
     }
 
     private func _calcOptimizedCellHeight() -> CGFloat {

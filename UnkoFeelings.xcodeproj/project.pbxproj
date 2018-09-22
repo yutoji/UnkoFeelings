@@ -33,6 +33,7 @@
 		5158457321511AD400DE5D94 /* LogCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5158457121511AD400DE5D94 /* LogCell.xib */; };
 		515845752151200500DE5D94 /* LogCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515845742151200500DE5D94 /* LogCellModel.swift */; };
 		515845782151207B00DE5D94 /* ViewUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515845772151207B00DE5D94 /* ViewUtil.swift */; };
+		515C9B742153FB9C005ACD95 /* LogCellModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515C9B732153FB9C005ACD95 /* LogCellModelTests.swift */; };
 		5174F71B215127AD00BDB119 /* LogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5174F71A215127AD00BDB119 /* LogCell.swift */; };
 		5174F71D2152494400BDB119 /* DeviceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5174F71C2152494400BDB119 /* DeviceService.swift */; };
 		5174F7212152742B00BDB119 /* FeelingEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5174F7202152742B00BDB119 /* FeelingEntity.swift */; };
@@ -94,6 +95,7 @@
 		5158457121511AD400DE5D94 /* LogCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogCell.xib; sourceTree = "<group>"; };
 		515845742151200500DE5D94 /* LogCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogCellModel.swift; sourceTree = "<group>"; };
 		515845772151207B00DE5D94 /* ViewUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewUtil.swift; sourceTree = "<group>"; };
+		515C9B732153FB9C005ACD95 /* LogCellModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogCellModelTests.swift; sourceTree = "<group>"; };
 		5174F71A215127AD00BDB119 /* LogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogCell.swift; sourceTree = "<group>"; };
 		5174F71C2152494400BDB119 /* DeviceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceService.swift; sourceTree = "<group>"; };
 		5174F7202152742B00BDB119 /* FeelingEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeelingEntity.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				51039FCC21533BB800FBF04E /* LogCellModelFactoryTests.swift */,
 				51E261502153822D004F4995 /* FeelingEntityTests.swift */,
 				51E2615421538EFA004F4995 /* DocumentsFeelingRepositoryTests.swift */,
+				515C9B732153FB9C005ACD95 /* LogCellModelTests.swift */,
 			);
 			path = UnkoFeelingsTests;
 			sourceTree = "<group>";
@@ -426,6 +429,7 @@
 				5158456B2151096D00DE5D94 /* InputViewModelTests.swift in Sources */,
 				51E2615521538EFA004F4995 /* DocumentsFeelingRepositoryTests.swift in Sources */,
 				51E261512153822D004F4995 /* FeelingEntityTests.swift in Sources */,
+				515C9B742153FB9C005ACD95 /* LogCellModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
