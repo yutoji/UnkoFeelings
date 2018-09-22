@@ -35,6 +35,9 @@
 		515845782151207B00DE5D94 /* ViewUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515845772151207B00DE5D94 /* ViewUtil.swift */; };
 		515C9B742153FB9C005ACD95 /* LogCellModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515C9B732153FB9C005ACD95 /* LogCellModelTests.swift */; };
 		515C9B7621561EB7005ACD95 /* Weak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515C9B7521561EB7005ACD95 /* Weak.swift */; };
+		515C9B7821562D12005ACD95 /* DateMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515C9B7721562D12005ACD95 /* DateMaker.swift */; };
+		515C9B7A21562EF1005ACD95 /* TimeProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515C9B7921562EF1005ACD95 /* TimeProgress.swift */; };
+		515C9B7C21563046005ACD95 /* TimeProgressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515C9B7B21563046005ACD95 /* TimeProgressTests.swift */; };
 		5174F71B215127AD00BDB119 /* LogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5174F71A215127AD00BDB119 /* LogCell.swift */; };
 		5174F71D2152494400BDB119 /* DeviceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5174F71C2152494400BDB119 /* DeviceService.swift */; };
 		5174F7212152742B00BDB119 /* FeelingEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5174F7202152742B00BDB119 /* FeelingEntity.swift */; };
@@ -98,6 +101,9 @@
 		515845772151207B00DE5D94 /* ViewUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewUtil.swift; sourceTree = "<group>"; };
 		515C9B732153FB9C005ACD95 /* LogCellModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogCellModelTests.swift; sourceTree = "<group>"; };
 		515C9B7521561EB7005ACD95 /* Weak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weak.swift; sourceTree = "<group>"; };
+		515C9B7721562D12005ACD95 /* DateMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateMaker.swift; sourceTree = "<group>"; };
+		515C9B7921562EF1005ACD95 /* TimeProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeProgress.swift; sourceTree = "<group>"; };
+		515C9B7B21563046005ACD95 /* TimeProgressTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeProgressTests.swift; sourceTree = "<group>"; };
 		5174F71A215127AD00BDB119 /* LogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogCell.swift; sourceTree = "<group>"; };
 		5174F71C2152494400BDB119 /* DeviceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceService.swift; sourceTree = "<group>"; };
 		5174F7202152742B00BDB119 /* FeelingEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeelingEntity.swift; sourceTree = "<group>"; };
@@ -182,6 +188,7 @@
 				51E261502153822D004F4995 /* FeelingEntityTests.swift */,
 				51E2615421538EFA004F4995 /* DocumentsFeelingRepositoryTests.swift */,
 				515C9B732153FB9C005ACD95 /* LogCellModelTests.swift */,
+				515C9B7B21563046005ACD95 /* TimeProgressTests.swift */,
 			);
 			path = UnkoFeelingsTests;
 			sourceTree = "<group>";
@@ -259,6 +266,8 @@
 				51E2614E21537E4B004F4995 /* UniqueIDGenerator.swift */,
 				51E261582153DCFA004F4995 /* DelegateContainer.swift */,
 				515C9B7521561EB7005ACD95 /* Weak.swift */,
+				515C9B7721562D12005ACD95 /* DateMaker.swift */,
+				515C9B7921562EF1005ACD95 /* TimeProgress.swift */,
 			);
 			path = util;
 			sourceTree = "<group>";
@@ -402,6 +411,7 @@
 				515845752151200500DE5D94 /* LogCellModel.swift in Sources */,
 				515844DE214F474100DE5D94 /* UnkoFeelings.xcdatamodeld in Sources */,
 				5174F71B215127AD00BDB119 /* LogCell.swift in Sources */,
+				515C9B7A21562EF1005ACD95 /* TimeProgress.swift in Sources */,
 				51039FC921533AFC00FBF04E /* LogCellModelFactory.swift in Sources */,
 				5174F7212152742B00BDB119 /* FeelingEntity.swift in Sources */,
 				51584549214F849000DE5D94 /* LogViewController.swift in Sources */,
@@ -415,6 +425,7 @@
 				51584561214FE8BA00DE5D94 /* FeelingTimeline.swift in Sources */,
 				515844D6214F474100DE5D94 /* AppDelegate.swift in Sources */,
 				51584557214FBDF900DE5D94 /* FeelingCondition.swift in Sources */,
+				515C9B7821562D12005ACD95 /* DateMaker.swift in Sources */,
 				515845672150EC6B00DE5D94 /* InputViewModel.swift in Sources */,
 				5174F71D2152494400BDB119 /* DeviceService.swift in Sources */,
 				515C9B7621561EB7005ACD95 /* Weak.swift in Sources */,
@@ -430,6 +441,7 @@
 				51584565214FF19B00DE5D94 /* FeelingTimelineTests.swift in Sources */,
 				515844EE214F474400DE5D94 /* UnkoFeelingsTests.swift in Sources */,
 				51039FCD21533BB800FBF04E /* LogCellModelFactoryTests.swift in Sources */,
+				515C9B7C21563046005ACD95 /* TimeProgressTests.swift in Sources */,
 				5158456B2151096D00DE5D94 /* InputViewModelTests.swift in Sources */,
 				51E2615521538EFA004F4995 /* DocumentsFeelingRepositoryTests.swift in Sources */,
 				51E261512153822D004F4995 /* FeelingEntityTests.swift in Sources */,
