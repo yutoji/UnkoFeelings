@@ -1,7 +1,13 @@
 import Foundation
 import UIKit
 
-class LogCellModel {
+/// Protocol for LogCell class.
+protocol LogCellModelProtocol {
+    var message: String { get }
+    var conditionImage: UIImage { get }
+}
+
+class LogCellModel: LogCellModelProtocol {
     private var _feeling: Feeling
 
     private static var __conditionImages = [FeelingCondition:UIImage]()

@@ -8,6 +8,13 @@ protocol TimeProgressProtocol {
     var progressRatio: Double { get }
 }
 
+extension TimeProgressProtocol {
+    var isCompleted: Bool {
+        assert(hasStarted)
+        return progressRatio >= 1.0
+    }
+}
+
 class TimeProgress: TimeProgressProtocol {
     private var _completeDuration: TimeInterval!
     private var _startOffset: TimeInterval!
@@ -37,11 +44,6 @@ class TimeProgress: TimeProgressProtocol {
         _startedAt = _dateMaker.make().addingTimeInterval(startOffset)
     }
 
-    var isCompleted: Bool {
-        assert(hasStarted)
-        return progressRatio >= 1.0
-    }
-
     var progressRatio: Double {
         assert(hasStarted)
         let elapsed = _dateMaker.make().timeIntervalSinceReferenceDate - _startedAt.timeIntervalSinceReferenceDate
@@ -49,5 +51,22 @@ class TimeProgress: TimeProgressProtocol {
         ratio = min(ratio, 1.0)
         ratio = max(ratio, 0.0)
         return ratio
+    }
+}
+
+class StubTimeProgress: TimeProgressProtocol {
+    var hasStarted: Bool = false
+    var _startedArgs: (TimeInterval, TimeInterval)!
+    func start(completeDuration: TimeInterval, startOffset: TimeInterval) {
+        assert(!hasStarted)
+        self.hasStarted = true
+        _startedArgs = (completeDuration, startOffset)
+    }
+    var progressRatio: Double = 0.0 {
+        didSet {
+            if progressRatio > 1.0 {
+                progressRatio = 1.0
+            }
+        }
     }
 }

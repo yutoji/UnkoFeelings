@@ -38,6 +38,9 @@
 		515C9B7821562D12005ACD95 /* DateMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515C9B7721562D12005ACD95 /* DateMaker.swift */; };
 		515C9B7A21562EF1005ACD95 /* TimeProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515C9B7921562EF1005ACD95 /* TimeProgress.swift */; };
 		515C9B7C21563046005ACD95 /* TimeProgressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515C9B7B21563046005ACD95 /* TimeProgressTests.swift */; };
+		515C9B7E21567C62005ACD95 /* LogCellAnimateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515C9B7D21567C62005ACD95 /* LogCellAnimateModel.swift */; };
+		515C9B8421567CBB005ACD95 /* LogCellAnimateModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515C9B8321567CBB005ACD95 /* LogCellAnimateModelTests.swift */; };
+		515C9B8621569D0B005ACD95 /* LogViewControllerAnimateModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515C9B8521569D0B005ACD95 /* LogViewControllerAnimateModelTests.swift */; };
 		5174F71B215127AD00BDB119 /* LogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5174F71A215127AD00BDB119 /* LogCell.swift */; };
 		5174F71D2152494400BDB119 /* DeviceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5174F71C2152494400BDB119 /* DeviceService.swift */; };
 		5174F7212152742B00BDB119 /* FeelingEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5174F7202152742B00BDB119 /* FeelingEntity.swift */; };
@@ -104,6 +107,9 @@
 		515C9B7721562D12005ACD95 /* DateMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateMaker.swift; sourceTree = "<group>"; };
 		515C9B7921562EF1005ACD95 /* TimeProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeProgress.swift; sourceTree = "<group>"; };
 		515C9B7B21563046005ACD95 /* TimeProgressTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeProgressTests.swift; sourceTree = "<group>"; };
+		515C9B7D21567C62005ACD95 /* LogCellAnimateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogCellAnimateModel.swift; sourceTree = "<group>"; };
+		515C9B8321567CBB005ACD95 /* LogCellAnimateModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogCellAnimateModelTests.swift; sourceTree = "<group>"; };
+		515C9B8521569D0B005ACD95 /* LogViewControllerAnimateModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogViewControllerAnimateModelTests.swift; sourceTree = "<group>"; };
 		5174F71A215127AD00BDB119 /* LogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogCell.swift; sourceTree = "<group>"; };
 		5174F71C2152494400BDB119 /* DeviceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceService.swift; sourceTree = "<group>"; };
 		5174F7202152742B00BDB119 /* FeelingEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeelingEntity.swift; sourceTree = "<group>"; };
@@ -189,6 +195,8 @@
 				51E2615421538EFA004F4995 /* DocumentsFeelingRepositoryTests.swift */,
 				515C9B732153FB9C005ACD95 /* LogCellModelTests.swift */,
 				515C9B7B21563046005ACD95 /* TimeProgressTests.swift */,
+				515C9B8321567CBB005ACD95 /* LogCellAnimateModelTests.swift */,
+				515C9B8521569D0B005ACD95 /* LogViewControllerAnimateModelTests.swift */,
 			);
 			path = UnkoFeelingsTests;
 			sourceTree = "<group>";
@@ -254,6 +262,7 @@
 				5174F71A215127AD00BDB119 /* LogCell.swift */,
 				515845742151200500DE5D94 /* LogCellModel.swift */,
 				51039FC821533AFC00FBF04E /* LogCellModelFactory.swift */,
+				515C9B7D21567C62005ACD95 /* LogCellAnimateModel.swift */,
 			);
 			path = log;
 			sourceTree = "<group>";
@@ -412,6 +421,7 @@
 				515844DE214F474100DE5D94 /* UnkoFeelings.xcdatamodeld in Sources */,
 				5174F71B215127AD00BDB119 /* LogCell.swift in Sources */,
 				515C9B7A21562EF1005ACD95 /* TimeProgress.swift in Sources */,
+				515C9B7E21567C62005ACD95 /* LogCellAnimateModel.swift in Sources */,
 				51039FC921533AFC00FBF04E /* LogCellModelFactory.swift in Sources */,
 				5174F7212152742B00BDB119 /* FeelingEntity.swift in Sources */,
 				51584549214F849000DE5D94 /* LogViewController.swift in Sources */,
@@ -443,9 +453,11 @@
 				51039FCD21533BB800FBF04E /* LogCellModelFactoryTests.swift in Sources */,
 				515C9B7C21563046005ACD95 /* TimeProgressTests.swift in Sources */,
 				5158456B2151096D00DE5D94 /* InputViewModelTests.swift in Sources */,
+				515C9B8621569D0B005ACD95 /* LogViewControllerAnimateModelTests.swift in Sources */,
 				51E2615521538EFA004F4995 /* DocumentsFeelingRepositoryTests.swift in Sources */,
 				51E261512153822D004F4995 /* FeelingEntityTests.swift in Sources */,
 				515C9B742153FB9C005ACD95 /* LogCellModelTests.swift in Sources */,
+				515C9B8421567CBB005ACD95 /* LogCellAnimateModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
