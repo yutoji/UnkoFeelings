@@ -52,6 +52,9 @@ extension LogViewController: UITableViewDataSource {
 extension LogViewController : FeelingTimelineDelegate {
     func onFeelingTimelineUpdated() {
         _initCellModels()
-        tableView.reloadData()
+
+        if isViewLoaded {
+            tableView.reloadData()
+        }
     }
 }
