@@ -14,7 +14,7 @@ iOS アプリ開発のお勉強のためにアプリを５日で作る。
 
 ## 目的
 - AutoLayout の練習
-- UITableView の練習
+- UITableView 高さ可変 cell の練習
 - UITableViewCell 内でちょっとしたアニメーションをさせる
     - 本来 stateless な UITableViewCell に、状態管理をもつ ViewModel を外挿して状態管理
 - きちんと動くものを一日サイクルで作る
@@ -60,6 +60,7 @@ iOS アプリ開発のお勉強のためにアプリを５日で作る。
 # 総括
 - できたこと
   - 矛盾なし AutoLayout
+  - Constraint で高さ可変 UITableViewCell
   - MVVM パターンとそのユニットテスト
   - UITableViewCell に状態管理のモデルを外挿してアニメーションを実現
   - クリーンアーキテクチャを意識して、デバイス依存部分をプロトコルで隠蔽
