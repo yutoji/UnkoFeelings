@@ -1,4 +1,7 @@
-5日で iOS アプリ「うんこの気持ち」を作るプロジェクト
+# うんこの気持ち - UnkoFeelings
+5日間で iOS アプリを作るトレーニングプロジェクトです
+
+<img width="256" src="https://user-images.githubusercontent.com/43261614/45923809-039e3900-bf2b-11e8-8602-c3def71a8185.png" /> <img width="256" src="https://user-images.githubusercontent.com/43261614/45923812-06009300-bf2b-11e8-9083-48168c7357df.png" /> <img width="300" src="https://user-images.githubusercontent.com/43261614/45923813-09941a00-bf2b-11e8-82e0-dc3c8ed780ac.gif" /> 
 
 # 概要
 iOS アプリ開発のお勉強のためにアプリを５日で作る。
@@ -56,6 +59,7 @@ iOS アプリ開発のお勉強のためにアプリを５日で作る。
 
 # 総括
 - できたこと
+  - 矛盾なし AutoLayout
   - MVVM パターンとそのユニットテスト
   - UITableViewCell に状態管理のモデルを外挿してアニメーションを実現
   - クリーンアーキテクチャを意識して、デバイス依存部分をプロトコルで隠蔽
